@@ -9,7 +9,11 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+    <div class="colomn-sm-4">
+        <div class="row">
+
+        </div>
+    </div>
     </div>
     </form>
 </body>

@@ -7,5 +7,9 @@ namespace SmartClinic.Bus
 {
     public class OccupiedTime
     {
+        private int occupiedId { get; set; }
+        private DateTime date { get; set; }
+        private int time { get; set; }
+        private Doctor docter { get; set; }
     }
 }

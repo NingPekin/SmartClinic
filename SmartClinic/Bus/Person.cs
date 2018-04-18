@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using SmartClinic.Data;
 
 namespace SmartClinic.Bus
 {
@@ -17,9 +18,14 @@ namespace SmartClinic.Bus
             this.type = type;
         }
 
+        public Person()
+        {
+        }
+
         public int id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
         public string email { get; set; }
         public string password { get; set; }
 
@@ -27,22 +33,70 @@ namespace SmartClinic.Bus
         //type 1: receptionist
         public EnumType.type type { get; set; }
 
-        public void Login(string email,string password)
+        //pass id to data layer
+        //return an object of person
+        public Person GetPersonById(int id)
         {
+            Person person =PersonDB.GetPersonById(id);
+            return person;
+           
+        }
+
+        //pass email to data layer
+        //return person id
+        public int GetPersonIdByEmail(string email)
+        {
+            int id=PersonDB.GetPersonIdByEmail(email);
+            return id;
+        }
+
+        //pass email and password to check if they are match the ones in db, through the function in data layer
+        //return true:valid credential 
+        //return false:invalid credential 
+        public bool IsValidCredential(string email,string password)
+        {
+            //default is not valid
+            bool isValid=false;
+            if (PersonDB.IsValidCredential(email, password))
+            {
+                isValid = true;
+            }
+    
+            return isValid;
+        }
+
+        //pass email to data layer to check if email is existed in db
+        //return true:email exist
+        //return false:email not exist
+        public bool ExistEmail(string email)
+        {
+            bool exist = false;
+            if(PersonDB.ExistEmail(email))
+            {
+                exist = true;
+            }
+
+            return exist;
 
         }
 
-        public void Logout(Person person)
-        {
+        //public void Logout(Person person)
+        //{
 
+        //}
+
+        //pass new password 
+        public void ChangePassword(string newPassword)
+        {
+            PersonDB.ChangePassword(newPassword);
         }
 
-        public void ChangePassword()
+        //pass person object to data layer
+        public void Register(Person person)
         {
-
+            PersonDB.Register(person);
         }
 
-        
 
 
     }

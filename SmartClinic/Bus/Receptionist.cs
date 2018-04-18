@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+using SmartClinic.Data;
 namespace SmartClinic.Bus
 {
     public class Receptionist : Person
@@ -10,25 +10,18 @@ namespace SmartClinic.Bus
         public Receptionist(int id, string firstName, string lastName, string email, string password, EnumType.type type) : base(id, firstName, lastName, email, password, type)
         {
         }
-
-
-        public void CreateAppointment(Patient patient, Appointment appointment)
-        {
-
-        }
-
-        public void CancelAppointment(Patient patient, Appointment appointment)
-        {
-
-        }
+        
+        //pass occupied object
+        //add occupied time into list
 
         public void SetOccupiedTime(OccupiedTime occupied)
         {
-
+            ReceptionistDB.SetOccupiedTime(occupied);
         }
 
         public void DeleteOccupiedTime(OccupiedTime occupied)
         {
+            ReceptionistDB.DeleteOccupiedTime(occupied);
 
         }
 

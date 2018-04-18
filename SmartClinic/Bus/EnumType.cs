@@ -12,5 +12,10 @@ namespace SmartClinic.Bus
             Patient,
             Receptionist
         }
+        public enum gender
+        {
+            Male,
+            Female
+        }
     }
 }

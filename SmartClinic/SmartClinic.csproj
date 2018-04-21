@@ -107,6 +107,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Api\mainapi.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -128,6 +129,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\mainapi.aspx.cs">
+      <DependentUpon>mainapi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Api\mainapi.aspx.designer.cs">
+      <DependentUpon>mainapi.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Bus\Appointment.cs" />
     <Compile Include="Bus\AppointmentCollection.cs" />
     <Compile Include="Bus\Doctor.cs" />

@@ -1,4 +1,5 @@
-﻿using SmartClinic.DataObject;
+﻿using SmartClinic.Data;
+using SmartClinic.DataObject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,6 +62,11 @@ namespace SmartClinic
                 //{
                 //    Response.Write(string.Format("{0} - {1}<br>", row.Id, row.Username));
                 //}
+
+                var result = Tools.IsValidCredential("test@test.ca", "1234", Bus.EnumType.UserType.Patient);
+
+                Response.Write(result.ToString());
+
             }
         }
     }

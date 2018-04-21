@@ -53,17 +53,7 @@ namespace SmartClinic.Bus
         //pass email and password to check if they are match the ones in db, through the function in data layer
         //return true:valid credential 
         //return false:invalid credential 
-        public bool IsValidCredential(string email,string password)
-        {
-            //default is not valid
-            bool isValid=false;
-            if (PersonDB.IsValidCredential(email, password))
-            {
-                isValid = true;
-            }
-    
-            return isValid;
-        }
+
 
         //pass email to data layer to check if email is existed in db
         //return true:email exist

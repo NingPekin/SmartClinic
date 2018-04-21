@@ -141,6 +141,7 @@
     <Compile Include="DataObject\ProjectContext.cs" />
     <Compile Include="DataObject\Receptionist.cs" />
     <Compile Include="Data\AppointmentDB.cs" />
+    <Compile Include="Data\Tools.cs" />
     <Compile Include="Data\UtilityDB.cs" />
     <Compile Include="Data\DoctorDB.cs" />
     <Compile Include="Data\OccupiedTimeDB.cs" />
@@ -169,6 +170,10 @@
     <Compile Include="Migrations\201804212120333_1.0.AddReceptionistRemoveUser.cs" />
     <Compile Include="Migrations\201804212120333_1.0.AddReceptionistRemoveUser.Designer.cs">
       <DependentUpon>201804212120333_1.0.AddReceptionistRemoveUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804212230243_1.0_Change_Patient_and_Receptionist_fields.cs" />
+    <Compile Include="Migrations\201804212230243_1.0_Change_Patient_and_Receptionist_fields.Designer.cs">
+      <DependentUpon>201804212230243_1.0_Change_Patient_and_Receptionist_fields.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Patient.aspx.cs">
@@ -206,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804212120333_1.0.AddReceptionistRemoveUser.resx">
       <DependentUpon>201804212120333_1.0.AddReceptionistRemoveUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804212230243_1.0_Change_Patient_and_Receptionist_fields.resx">
+      <DependentUpon>201804212230243_1.0_Change_Patient_and_Receptionist_fields.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using SmartClinic.Bus;
+using SmartClinic.DataObject;
+
 namespace SmartClinic.Data
 {
     public class PersonDB
     {
         public static Person GetPersonById(int id)
         {
-            Person person = new Person();
-            return person;
+            Person p = new Person();
+            return p;
+
         }
 
         public static int GetPersonIdByEmail(string email)

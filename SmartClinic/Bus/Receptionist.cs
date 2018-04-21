@@ -7,7 +7,7 @@ namespace SmartClinic.Bus
 {
     public class Receptionist : Person
     {
-        public Receptionist(int id, string firstName, string lastName, string email, string password, EnumType.type type) : base(id, firstName, lastName, email, password, type)
+        public Receptionist(int id, string firstName, string lastName, string email, string password, EnumType.UserType type) : base(id, firstName, lastName, email, password, type)
         {
         }
         

@@ -8,7 +8,7 @@ namespace SmartClinic.Bus
 {
     public class Person
     {
-        public Person(int id, string firstName, string lastName, string email, string password, EnumType.type type)
+        public Person(int id, string firstName, string lastName, string email, string password, EnumType.UserType type)
         {
             this.id = id;
             FirstName = firstName;
@@ -31,7 +31,7 @@ namespace SmartClinic.Bus
 
         //type 0: patient 
         //type 1: receptionist
-        public EnumType.type type { get; set; }
+        public EnumType.UserType type { get; set; }
 
         //pass id to data layer
         //return an object of person

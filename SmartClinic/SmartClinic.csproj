@@ -43,6 +43,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -129,6 +137,9 @@
     <Compile Include="Bus\Patient.cs" />
     <Compile Include="Bus\Person.cs" />
     <Compile Include="Bus\Receptionist.cs" />
+    <Compile Include="DataObject\Patient.cs" />
+    <Compile Include="DataObject\ProjectContext.cs" />
+    <Compile Include="DataObject\Receptionist.cs" />
     <Compile Include="Data\AppointmentDB.cs" />
     <Compile Include="Data\UtilityDB.cs" />
     <Compile Include="Data\DoctorDB.cs" />
@@ -143,6 +154,23 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804212006599_1.0_Init.cs" />
+    <Compile Include="Migrations\201804212006599_1.0_Init.Designer.cs">
+      <DependentUpon>201804212006599_1.0_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804212033016_1.0_User_Add_LastLoginTime_Column.cs" />
+    <Compile Include="Migrations\201804212033016_1.0_User_Add_LastLoginTime_Column.Designer.cs">
+      <DependentUpon>201804212033016_1.0_User_Add_LastLoginTime_Column.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804212047157_1.0.User_Add_ForeignKey.cs" />
+    <Compile Include="Migrations\201804212047157_1.0.User_Add_ForeignKey.Designer.cs">
+      <DependentUpon>201804212047157_1.0.User_Add_ForeignKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804212120333_1.0.AddReceptionistRemoveUser.cs" />
+    <Compile Include="Migrations\201804212120333_1.0.AddReceptionistRemoveUser.Designer.cs">
+      <DependentUpon>201804212120333_1.0.AddReceptionistRemoveUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Patient.aspx.cs">
       <DependentUpon>Patient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,6 +193,20 @@
     <Compile Include="Registeration.aspx.designer.cs">
       <DependentUpon>Registeration.aspx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201804212006599_1.0_Init.resx">
+      <DependentUpon>201804212006599_1.0_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804212033016_1.0_User_Add_LastLoginTime_Column.resx">
+      <DependentUpon>201804212033016_1.0_User_Add_LastLoginTime_Column.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804212047157_1.0.User_Add_ForeignKey.resx">
+      <DependentUpon>201804212047157_1.0.User_Add_ForeignKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804212120333_1.0.AddReceptionistRemoveUser.resx">
+      <DependentUpon>201804212120333_1.0.AddReceptionistRemoveUser.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

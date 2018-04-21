@@ -7,7 +7,7 @@ namespace SmartClinic.Bus
 {
     public class Patient : Person
     {
-        public Patient(int id, string firstName, string lastName, string email, string password, EnumType.type type, DateTime birthOfDate, long phoneNumber, EnumType.gender gender, List<int> allergyList, List<int> habitList, List<string> surgeryList) : base(id, firstName, lastName, email, password, type)
+        public Patient(int id, string firstName, string lastName, string email, string password, EnumType.UserType type, DateTime birthOfDate, long phoneNumber, EnumType.Gender gender, List<int> allergyList, List<int> habitList, List<string> surgeryList) : base(id, firstName, lastName, email, password, type)
         {
             this.birthOfDate = birthOfDate;
             this.phoneNumber = phoneNumber;
@@ -19,7 +19,7 @@ namespace SmartClinic.Bus
 
         public DateTime birthOfDate  { get; set; }
         public Int64 phoneNumber { get; set; }
-        public EnumType.gender gender { get; set; }
+        public EnumType.Gender gender { get; set; }
 
         //could change to dictionary
         //list of allergies, 0 no, 1 yes

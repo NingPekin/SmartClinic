@@ -7,12 +7,12 @@ namespace SmartClinic.Bus
 {
     public class EnumType
     {
-        public enum type
+        public enum UserType
         {
             Patient,
             Receptionist
         }
-        public enum gender
+        public enum Gender
         {
             Male,
             Female

@@ -14,16 +14,16 @@ namespace SmartClinic.Bus
         //pass occupied object
         //add occupied time into list
 
-        public void SetOccupiedTime(OccupiedTime occupied)
-        {
-            ReceptionistDB.SetOccupiedTime(occupied);
-        }
+        //public void SetOccupiedTime(OccupiedTime occupied)
+        //{
+        //    ReceptionistDB.SetOccupiedTime(occupied);
+        //}
 
-        public void DeleteOccupiedTime(OccupiedTime occupied)
-        {
-            ReceptionistDB.DeleteOccupiedTime(occupied);
+        //public void DeleteOccupiedTime(OccupiedTime occupied)
+        //{
+        //    ReceptionistDB.DeleteOccupiedTime(occupied);
 
-        }
+        //}
 
 
 

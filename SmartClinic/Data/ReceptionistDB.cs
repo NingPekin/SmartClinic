@@ -3,21 +3,48 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using SmartClinic.Bus;
+using SmartClinic.DataObject;
 
 namespace SmartClinic.Data
 {
     public class ReceptionistDB
     {
-
-        public static void SetOccupiedTime(OccupiedTime occupied)
+      /// <summary>
+      /// get receptionist object by email
+      /// </summary>
+      /// <param name="email"></param>
+      /// <returns>receptionist</returns>
+        public static DataObject.Receptionist GetReceptionistByEmail(string email)
         {
-            OccupiedTimeCollection.AddOccupiedTimeToList(occupied);
+            using (var db = new ProjectContext())
+            {
+                return db.Receptionist.Where(a => a.Email == email).FirstOrDefault();
+            }
+
         }
 
-        public static void DeleteOccupiedTime(OccupiedTime occupied)
+        //insert oppcuied time into db
+        public static void AddOccupiedTimeToList(DataObject.OccupiedTime occupied)
         {
-            OccupiedTimeCollection.RemoveOccupiedTimeFromList(occupied);
+            //OccupiedTimeCollection.AddOccupiedTimeToList(occupied);
+            using (var db = new ProjectContext())
+            {
+                db.OccupiedTime.Add(occupied);
+                db.SaveChanges();
+            }
+
         }
+        //delete from db
+        public static void RemoveOccupiedTimeFromList(DataObject.OccupiedTime occupied)
+        {
+            //OccupiedTimeCollection.RemoveOccupiedTimeFromList(occupied);
+            using (var db = new ProjectContext())
+            {
+                db.OccupiedTime.Remove(occupied);
+                db.SaveChanges();
+            }
+        }
+
 
     }
 }

@@ -137,20 +137,20 @@
       <DependentUpon>mainapi.aspx</DependentUpon>
     </Compile>
     <Compile Include="Bus\Appointment.cs" />
-    <Compile Include="Bus\AppointmentCollection.cs" />
     <Compile Include="Bus\Doctor.cs" />
     <Compile Include="Bus\EnumType.cs" />
     <Compile Include="Bus\OccupiedTime.cs" />
-    <Compile Include="Bus\OccupiedTimeCollection.cs" />
     <Compile Include="Bus\Patient.cs" />
     <Compile Include="Bus\Person.cs" />
     <Compile Include="Bus\Receptionist.cs" />
+    <Compile Include="DataObject\Appointment.cs" />
+    <Compile Include="DataObject\Doctor.cs" />
+    <Compile Include="DataObject\OccupiedTime.cs" />
     <Compile Include="DataObject\Patient.cs" />
     <Compile Include="DataObject\ProjectContext.cs" />
     <Compile Include="DataObject\Receptionist.cs" />
     <Compile Include="Data\AppointmentDB.cs" />
     <Compile Include="Data\Tools.cs" />
-    <Compile Include="Data\UtilityDB.cs" />
     <Compile Include="Data\DoctorDB.cs" />
     <Compile Include="Data\OccupiedTimeDB.cs" />
     <Compile Include="Data\PatientDB.cs" />
@@ -182,6 +182,26 @@
     <Compile Include="Migrations\201804212230243_1.0_Change_Patient_and_Receptionist_fields.cs" />
     <Compile Include="Migrations\201804212230243_1.0_Change_Patient_and_Receptionist_fields.Designer.cs">
       <DependentUpon>201804212230243_1.0_Change_Patient_and_Receptionist_fields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231435159_1.0_AddDoctor_Appointment_OccupiedTime.cs" />
+    <Compile Include="Migrations\201804231435159_1.0_AddDoctor_Appointment_OccupiedTime.Designer.cs">
+      <DependentUpon>201804231435159_1.0_AddDoctor_Appointment_OccupiedTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231527147_1.0_listoccupiedtime_listappointment.cs" />
+    <Compile Include="Migrations\201804231527147_1.0_listoccupiedtime_listappointment.Designer.cs">
+      <DependentUpon>201804231527147_1.0_listoccupiedtime_listappointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231614088_1.0_change_appointment_time_to_timespan.cs" />
+    <Compile Include="Migrations\201804231614088_1.0_change_appointment_time_to_timespan.Designer.cs">
+      <DependentUpon>201804231614088_1.0_change_appointment_time_to_timespan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231701133_1.0_edit_foreignkey_appointment+occupiedTime.cs" />
+    <Compile Include="Migrations\201804231701133_1.0_edit_foreignkey_appointment+occupiedTime.Designer.cs">
+      <DependentUpon>201804231701133_1.0_edit_foreignkey_appointment+occupiedTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231716402_1.0_edit_occupiedtime_tostring.cs" />
+    <Compile Include="Migrations\201804231716402_1.0_edit_occupiedtime_tostring.Designer.cs">
+      <DependentUpon>201804231716402_1.0_edit_occupiedtime_tostring.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Patient.aspx.cs">
@@ -222,6 +242,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804212230243_1.0_Change_Patient_and_Receptionist_fields.resx">
       <DependentUpon>201804212230243_1.0_Change_Patient_and_Receptionist_fields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231435159_1.0_AddDoctor_Appointment_OccupiedTime.resx">
+      <DependentUpon>201804231435159_1.0_AddDoctor_Appointment_OccupiedTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231527147_1.0_listoccupiedtime_listappointment.resx">
+      <DependentUpon>201804231527147_1.0_listoccupiedtime_listappointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231614088_1.0_change_appointment_time_to_timespan.resx">
+      <DependentUpon>201804231614088_1.0_change_appointment_time_to_timespan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231701133_1.0_edit_foreignkey_appointment+occupiedTime.resx">
+      <DependentUpon>201804231701133_1.0_edit_foreignkey_appointment+occupiedTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231716402_1.0_edit_occupiedtime_tostring.resx">
+      <DependentUpon>201804231716402_1.0_edit_occupiedtime_tostring.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

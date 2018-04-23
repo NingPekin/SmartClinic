@@ -63,9 +63,46 @@ namespace SmartClinic
                 //    Response.Write(string.Format("{0} - {1}<br>", row.Id, row.Username));
                 //}
 
-                var result = Tools.IsValidCredential("test@test.ca", "1234", Bus.EnumType.UserType.Patient);
+                //var result = Tools.IsValidCredential("test@test.ca", "1234", Bus.EnumType.UserType.Patient);
 
-                Response.Write(result.ToString());
+                //Response.Write(result.ToString());
+
+                //===========================================
+                // Example of add new appointment
+                //var patient = db.Patient.Find(4);
+                //var doctor = db.Doctor.Find(1);
+                //var appointment = new Appointment {Patient=patient,Doctor=doctor, Date = new DateTime(2018, 04, 27), Time = "14:00:00" };
+
+                //db.Appointment.Add(appointment);
+                //db.SaveChanges();
+
+                //===========================================
+                // Example of add new occupied time
+
+                //var doctor = db.Doctor.Find(1);
+                //var occupied = new OccupiedTime { Doctor = doctor, Date = new DateTime(2018, 04, 27), Time = "14:00:00" };
+                //db.OccupiedTime.Add(occupied);
+                //db.SaveChanges();
+
+
+                //// Example of search doctor
+                //var labdaQuery = db.Doctor.ToList();
+
+                //foreach (var row in labdaQuery)
+                //{
+                //    Response.Write(string.Format("{0} - {1}-{2}<br>", row.Id, row.Name,row.Department));
+                //}
+
+
+                //=============================
+                //test GetAppointmentByDoctor
+            
+               var list= AppointmentDB.GetAppointmentByDoctors(1);
+                foreach(var row in list)
+                {
+                    Response.Write(string.Format("{0}-{1}",  row.Date, row.Time));
+                }
+
 
             }
         }

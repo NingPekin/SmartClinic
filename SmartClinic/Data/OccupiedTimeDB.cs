@@ -1,4 +1,5 @@
 ﻿using SmartClinic.Bus;
+using SmartClinic.DataObject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,27 +10,19 @@ namespace SmartClinic.Data
 {
     public class OccupiedTimeDB
     {
-        //insert oppcuied time into db
-        public static void AddOccupiedTimeToList(OccupiedTime occupied)
-        {
-
-        }
-        //delete from db
-        public static void RemoveOccupiedTimeFromList(OccupiedTime occupied)
-        {
-
-        }
 
         //search by doctor object
-        public static List<OccupiedTime> GetOccupiedTimeByDoctor(Doctor doctor)
+        public static List<DataObject.OccupiedTime> GetOccupiedTimeByDoctor(DataObject.Doctor doctor)
         {
-            List<OccupiedTime> occupiedTime = new List<OccupiedTime>();
+            using (var db = new ProjectContext())
+            {
+                var occupiedTime = db.OccupiedTime.Include("Doctor").Where(a => a.Doctor.Id == doctor.Id).ToList();
+                db.SaveChanges();
+                return occupiedTime;
+            }
 
-            return occupiedTime;
+
         }
-
-
-
 
 
 

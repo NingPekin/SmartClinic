@@ -31,28 +31,28 @@ namespace SmartClinic.Bus
         //if patient took any surgery before
         public List<String> surgeryList { get; set; }
 
-        //pass object appointment
-        //process create new appointment == add it to appointment list
-        public void CreateAppointment(Appointment appointment)
-        {
-            AppointmentCollection.AddAppointmentToList(appointment);
-        }
+        ////pass object appointment
+        ////process create new appointment == add it to appointment list
+        //public void CreateAppointment(DataObject.Appointment appointment)
+        //{
+        //    AppointmentCollection.AddAppointmentToList(appointment);
+        //}
 
-        //pass object appoinment
-        //remove appointment from list 
-        public void CancelAppointment(Appointment appointment)
-        {
-            AppointmentCollection.AddAppointmentToList(appointment);
-        }
+        ////pass object appoinment
+        ////remove appointment from list 
+        //public void CancelAppointment(DataObject.Appointment appointment)
+        //{
+        //    AppointmentCollection.AddAppointmentToList(appointment);
+        //}
 
-        //send appointment via email
+        ////send appointment via email
         
-        public void SendAppointmentReminder(Appointment appointment)
-        {
-            //email
-            string email = this.email;
+        //public void SendAppointmentReminder(DataObject.Appointment appointment)
+        //{
+        //    //email
+        //    string email = this.email;
 
-        }
+        //}
 
 
 

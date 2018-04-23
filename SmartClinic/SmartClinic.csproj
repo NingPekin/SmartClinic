@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Api\mainapi.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="css\home.css" />
     <Content Include="css\landing-page.css" />
     <Content Include="css\style.css" />
@@ -314,6 +315,13 @@
     <Compile Include="Bus\Patient.cs" />
     <Compile Include="Bus\Person.cs" />
     <Compile Include="Bus\Receptionist.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataObject\Appointment.cs" />
     <Compile Include="DataObject\Doctor.cs" />
     <Compile Include="DataObject\OccupiedTime.cs" />

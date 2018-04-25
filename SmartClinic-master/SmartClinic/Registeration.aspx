@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Receptionist.aspx.cs" Inherits="SmartClinic.Receptionist" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registeration.aspx.cs" Inherits="SmartClinic.Registeration" %>
 
 <!DOCTYPE html>
 
@@ -9,9 +9,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    test
+    
     </div>
     </form>
 </body>
 </html>
-

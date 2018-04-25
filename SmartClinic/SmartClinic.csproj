@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Api\mainapi.aspx" />
+    <Content Include="Appointment.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="css\home.css" />
     <Content Include="css\landing-page.css" />
@@ -307,6 +308,13 @@
     </Compile>
     <Compile Include="Api\mainapi.aspx.designer.cs">
       <DependentUpon>mainapi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment.aspx.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Appointment.aspx.designer.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Bus\Appointment.cs" />
     <Compile Include="Bus\Doctor.cs" />

@@ -1,15 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registeration.aspx.cs" Inherits="SmartClinic.Registeration" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Appointment.aspx.cs" Inherits="SmartClinic.Appointment" %>
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Receptionist.aspx.cs" Inherits="SmartClinic.Receptionist" %>
 
 <!DOCTYPE html>
- 
-<html class="no-js"> 
-<head runat="server">
+
+<html class="no-js">
+<head  runat="server">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="description" content="Aviato E-Commerce Template">
   
   <meta name="author" content="Themefisher.com">
 
-  <title>Smart Clinic</title>
+  <title>Smart clinic</title>
 
   <!-- Mobile Specific Meta-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,84 +78,62 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block">
-          <h1>Registration</h1>
-          <p></p>
+          <h1 style="font-family: Time new roman">Appointment</h1>
+          <p>Make your Appointment by <strong>YOUR-SELF</strong> </p>
         </div>
       </div>
     </div>
   </div>
 </section>
+      <!--joinusModal-->
+      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-md" role="document">
+          <form method="get" action="blog-grid.html">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Login</h4>
+                </div>
+                <div class="modal-body">
+                  <label class="label label-default" >Enter your Email</label>
+                  <input type="email" id="email" name="email" class="form-control"/>
+				  <label class="label label-default" >Enter your Password</label>
+                  <input type="text" id="password" name="Password" class="form-control" />
+                </div>
+                <div class="modal-footer">
+                  <div id="total" style="font-size:20px; color:darkblue; float:left;"></div>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-success" id="subscribebtn" action="onclick()" value="2">Login</button>
+                </div>
+          </div>
+        </form>
+      </div>
+    </div>
+      <!--EndjoinusModal-->
 
-<section class="page-wrapper">
-<div class="container">
-<div class="row">
-<div class="col-sm-4">
-<div class="block">
-                        
-                        <div class="form-group">
-						<strong style="font-family:Time New Roman;font-size:20px;">First Name:</strong><br>
-                            <input name="firstName" type="text" class="form-control" placeholder="Your  First Name"><br>
-							<strong style="font-family:Time New Roman;font-size:20px;">Last Name:</strong><br>
-							<input name="lastName" type="text" class="form-control" placeholder="Your   Last Name">
-                        </div>
-						<div class="form-group">
-						<form>
-						<strong style="font-family:Time New Roman;font-size:20px;">Gender:</strong><br>
-						  <input type="checkbox" name="gender" value="Female"> Male<br>
-						  <input type="checkbox" name="gender2" value="Male"> Female 
-						</form>
-						</div>
-						<div class="form-group">
-						<strong style="font-family:Time New Roman;font-size:20px;">Description:</strong><br>
-						Please specify your Allergies and your medical Issues:
-                        <input name="description" type="text" class="form-control" placeholder="Description">
-                        </div>
-						<div class="form-group">
-						<button type="submit" class="btn btn-success" id="Register" action="Register()" >Register</button>
-						</div>
-                        
-                    </div>
-</div>
-<div class="col-sm-4">
-<div class="block">
-						<div class="form-group">
-						<strong style="font-family:Time New Roman;font-size:20px;">Email:</strong><br>
-                         <input name="user_email" type="text" class="form-control" placeholder="Email Address">
-                        </div>
-                        <div class="form-group">
-						<strong style="font-family:Time New Roman;font-size:20px;">Phone:</strong><br>
-                        <input name="Phone" type="text" class="form-control" placeholder="Phone Number">
-                        </div>
-</div>
-</div>
-<div class="col-sm-4">
-<div class="block">
-						<div class="form-group">
-						<strong style="font-family:Time New Roman;font-size:20px;">Birthday::</strong><br>
-						<input type="date" name="birthday">
-						<input type="submit">
-                        </div>
-                        </div>
-</div>
-</div>
-</section>
-<!-- Call to action Start -->
-
-<section class="call-to-action bg-1 section-sm overly">
+<div class="page-wrapper">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<div class="block">
-					<h2>We offer delightful Health Care Services</h2>
-					<p>Read more about what we do and our philosophy of medication. See for yourself The work and results <br> we’ve achieved for other clients, and meet our highly experienced Team who just love to help you.</p>
-					<a class="btn btn-main btn-solid-border" href="#" >Make an Appointment</a>
+      		<div class="col-md-6 ">
+		        <div class="post">
+		          <img class="img-responsive" src="images/blog/blog-post-1.jpg" alt=""><br>
+		          <p> Make or Change schedule for a week or for each doctor in any departments</P><br>
+		          <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info">Login</a>
+			   </div>
 				</div>
-			</div>
-		</div>
-	</div>
-</section>
+        	
+			<div class="col-md-6 ">
+		        <div class="post">
+	            <img class="img-responsive" src="images/blog/blog-post-2.jpg" alt=""><br>
+				<p> feel free to Make your appointment based on your schedule</P><br>
+	            <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info">Login</a>
+				<a href="" class="btn btn-info">SignUp</a>
+		    </div>
+	      	</div>
+		</div>	
+      	</div>
+</div>
 
-<!-- Content Start -->
 
 
 <!-- footer Start -->
@@ -169,7 +149,6 @@
 		</div>
 	</div>
 </footer>
-
 
     <!-- 
     Essential Scripts
@@ -203,9 +182,36 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
 
     <script src="js/script.js"></script>
-    
+    <script>
+	function onclick()
+{
+    var UserName=document.getElementById("email").value;
+	var Password=document.getElementById("password").value;
+	var Type=document.getElementById("submit").value;
+    if( ExistEmail(Username,Type)&& isValidCredential(Username,Password,Type)){
+	if(Type==1){
+	
+	    location.href="blog-grid-Patient.html";
+		
+		}
+		else{
+		
+		location.href="blog-grid-Receptionist.html";
+		
+		}
+	}
+   
+    else
+    {
+        alert( "validation failed" );
+        location.href="blog-grid.html";
+    }
+	}
+	
+	</script>
 
 
 
   </body>
   </html>
+

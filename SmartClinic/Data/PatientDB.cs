@@ -13,17 +13,6 @@ namespace SmartClinic.Data
     public class PatientDB
     {
 
-        //insert new appointment into db
-        //public static void CreateAppointment(Appointment appointment)
-        //{
-
-        //}
-
-        //public void CancelAppointment(Appointment appointment)
-        //{
-
-        //}
-
         public static DataObject.Patient GetPatientById(int id)
         {
             using (var db = new ProjectContext())

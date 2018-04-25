@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLActivityDiagram1">
+  <activityRootModelMoniker Id="0919ac11-d189-41de-b15a-a0184d0183b4" />
+  <nestedChildShapes>
+    <objectNodeShape Id="ae5f9f5e-4282-4333-822f-df45c0596a86" absoluteBounds="1.25, 0.625, 1.125, 0.375" customColor="White">
+      <objectNodeMoniker Id="529f541e-d8c1-4844-b0d6-6974205d2de1" LastKnownName="o" />
+    </objectNodeShape>
+    <objectNodeShape Id="543b9643-3cf6-43f8-99a5-0cb60635ee2f" absoluteBounds="3.25, 0.625, 1.125, 0.375" customColor="White">
+      <objectNodeMoniker Id="8f27bd56-7330-4985-a016-8a115284771b" LastKnownName="Object2" />
+    </objectNodeShape>
+  </nestedChildShapes>
+</activityDiagram>

@@ -108,6 +108,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Api\mainapi.aspx" />
+    <Content Include="Appointment.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="css\home.css" />
     <Content Include="css\landing-page.css" />
     <Content Include="css\style.css" />
@@ -147,7 +149,6 @@
     <Content Include="plugins\slick-carousel\slick\slick-theme.scss" />
     <Content Include="plugins\slick-carousel\slick\slick.less" />
     <Content Include="plugins\slick-carousel\slick\slick.scss" />
-    <Content Include="ClassDiagram1.cd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -308,7 +309,27 @@
     <Compile Include="Api\mainapi.aspx.designer.cs">
       <DependentUpon>mainapi.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Appointment.aspx.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Appointment.aspx.designer.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bus\Appointment.cs" />
+    <Compile Include="Bus\Doctor.cs" />
     <Compile Include="Bus\EnumType.cs" />
+    <Compile Include="Bus\OccupiedTime.cs" />
+    <Compile Include="Bus\Patient.cs" />
+    <Compile Include="Bus\Person.cs" />
+    <Compile Include="Bus\Receptionist.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataObject\Appointment.cs" />
     <Compile Include="DataObject\Doctor.cs" />
     <Compile Include="DataObject\OccupiedTime.cs" />
@@ -320,6 +341,7 @@
     <Compile Include="Data\DoctorDB.cs" />
     <Compile Include="Data\OccupiedTimeDB.cs" />
     <Compile Include="Data\PatientDB.cs" />
+    <Compile Include="Data\PersonDB.cs" />
     <Compile Include="Data\ReceptionistDB.cs" />
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>

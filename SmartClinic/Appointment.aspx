@@ -1,15 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="SmartClinic.HomePage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Appointment.aspx.cs" Inherits="SmartClinic.Appointment" %>
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Receptionist.aspx.cs" Inherits="SmartClinic.Receptionist" %>
 
 <!DOCTYPE html>
 
-<html class="no-js"> <!--<![endif]-->
-<head runat="server">
+<html class="no-js">
+<head  runat="server">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="description" content="Aviato E-Commerce Template">
   
   <meta name="author" content="Themefisher.com">
 
-  <title>Smart Clinic </title>
+  <title>Smart clinic</title>
 
   <!-- Mobile Specific Meta-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +28,7 @@
   <!-- Owl Carousel CSS -->
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -57,11 +59,11 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
-                                <li><a href="Homepage.aspx"><b>Home</b></a></li>
+                                <li><a href="index.html"><b>Home</b></a></li>
 								<li><a href="service.html">Registration</a></li>
 								<li><a href="blog-grid.html">Appointment</a>
 								</li>
-								<li><a href="Contact.aspx">Contact</a></li>
+								<li><a href="contact.html">Contact</a></li>
 							</ul>
 							</div><!-- /.navbar-collapse -->
 							</div><!-- /.container-fluid -->
@@ -71,106 +73,67 @@
 			</div>
 			</header><!-- header close -->
 
-<!-- Slider Start -->
-<section class="slider">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="block">
-					<h1 class="animated fadeInUp"> <b>The Smart Clinic</b></h1>
-					<p class="animated fadeInUp">We provide the best possible health care to our patients in Mission </br>  Committed to Caring</p>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Wrapper Start -->
-<section class="about section">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-7 col-sm-12">
-				<div class="block">
-					<div class="section-title">
-						<h2>About Us</h2>
-						<p>Creating a healthier community through the provision and transformation of comprehensive patient-centred primary care.</p>
-					</div>
-					<p>To provide leadership and excellence in comprehensive patient-centred primary care through education, research, innovation and care provision in a collaborative, sustainable, inter-professional environment.</p>
-				</div>
-			</div><!-- .col-md-7 close -->
-			<div class="col-md-5 col-sm-12">
-				<div class="block">
-					<img src="images/aboutUs.png" alt="Img">
-				</div>
-			</div><!-- .col-md-5 close -->
-		</div>
-	</div>
-</section>
-
-<!-- Service Start -->
-<section class="service">
+<section class="page-title bg-2">
   <div class="container">
     <div class="row">
-      <div class="section-title">
-        <h2>Our Services</h2><br>
-        <p>The Smart Clinics takes a fully integrated approach to managing your health by combining the very best of conventional<br>
-		and complementary health care. <br> there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-      </div>
-    </div>
-    <div class="row ">
-      <div class="col-sm-6 col-md-3">
-        <div class="service-item">
-          <i class="ion-happy-outline"></i>
-          <h4>Children's Services</h4>
-          <p>ur GPs, Paediatric Specialists, Complementary Therapists and Dentists have<br>
-		  a wealth of experience working with babies, children and young adults.</p>
+      <div class="col-md-12">
+        <div class="block">
+          <h1 style="font-family: Time new roman">Appointment</h1>
+          <p>Make your Appointment by <strong>YOUR-SELF</strong> </p>
         </div>
       </div>
-      <div class="col-sm-6 col-md-3">
-        <div class="service-item">
-          <i class="ion-medkit"></i>
-          <h4>Women's Health</h4>
-          <p>The Smart Clinics provide women’s health and gynaecology services, including<br>
-		  a comprehensive annual health check for female patients. </p>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-3">
-        <div class="service-item">
-          <i class="ion-female"></i>
-          <h4>Sexual Health</h4>
-          <p>We offer the full range of tests for sexually transmitted diseases, commonly known as STDs or STIs.</p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <div class="service-item">
-          <i class="ion-ios-rose"></i>
-          <h4>Pregnancy Care</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
-        </div>
-      </div>
-     
     </div>
   </div>
 </section>
-<!-- Call to action Start -->
+      <!--joinusModal-->
+      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-md" role="document">
+          <form method="get" action="blog-grid.html">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Login</h4>
+                </div>
+                <div class="modal-body">
+                  <label class="label label-default" >Enter your Email</label>
+                  <input type="email" id="email" name="email" class="form-control"/>
+				  <label class="label label-default" >Enter your Password</label>
+                  <input type="text" id="password" name="Password" class="form-control" />
+                </div>
+                <div class="modal-footer">
+                  <div id="total" style="font-size:20px; color:darkblue; float:left;"></div>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-success" id="subscribebtn" action="onclick()" value="2">Login</button>
+                </div>
+          </div>
+        </form>
+      </div>
+    </div>
+      <!--EndjoinusModal-->
 
-<section class="call-to-action bg-1 section-sm overly">
+<div class="page-wrapper">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<div class="block">
-					<h2>We offer delightful Health Care Services</h2>
-					<p>Read more about what we do and our philosophy of medication. See for yourself The work and results <br> we’ve achieved for other clients, and meet our highly experienced Team who just love to help you.</p>
-					<a class="btn btn-main btn-solid-border" href="#" >Make an Appointment</a>
+      		<div class="col-md-6 ">
+		        <div class="post">
+		          <img class="img-responsive" src="images/blog/blog-post-1.jpg" alt=""><br>
+		          <p> Make or Change schedule for a week or for each doctor in any departments</P><br>
+		          <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info">Login</a>
+			   </div>
 				</div>
-			</div>
-		</div>
-	</div>
-</section>
+        	
+			<div class="col-md-6 ">
+		        <div class="post">
+	            <img class="img-responsive" src="images/blog/blog-post-2.jpg" alt=""><br>
+				<p> feel free to Make your appointment based on your schedule</P><br>
+	            <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info">Login</a>
+				<a href="" class="btn btn-info">SignUp</a>
+		    </div>
+	      	</div>
+		</div>	
+      	</div>
+</div>
 
-<!-- Content Start -->
 
 
 <!-- footer Start -->
@@ -219,12 +182,36 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
 
     <script src="js/script.js"></script>
-    
+    <script>
+	function onclick()
+{
+    var UserName=document.getElementById("email").value;
+	var Password=document.getElementById("password").value;
+	var Type=document.getElementById("submit").value;
+    if( ExistEmail(Username,Type)&& isValidCredential(Username,Password,Type)){
+	if(Type==1){
+	
+	    location.href="blog-grid-Patient.html";
+		
+		}
+		else{
+		
+		location.href="blog-grid-Receptionist.html";
+		
+		}
+	}
+   
+    else
+    {
+        alert( "validation failed" );
+        location.href="blog-grid.html";
+    }
+	}
+	
+	</script>
 
 
 
   </body>
   </html>
-   
-
 

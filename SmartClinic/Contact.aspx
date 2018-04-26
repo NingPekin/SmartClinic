@@ -1,7 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registeration.aspx.cs" Inherits="SmartClinic.Registeration" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="SmartClinic.Contact" %>
 <!DOCTYPE html>
- 
 <html class="no-js"> 
 <head runat="server">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -9,7 +7,7 @@
   
   <meta name="author" content="Themefisher.com">
 
-  <title>Smart Clinic</title>
+  <title>Smart Clinic </title>
 
   <!-- Mobile Specific Meta-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,7 +31,6 @@
 </head>
 
 <body id="body">
-
 <!-- Header Start -->
 <header class="navigation">
 	<div class="container">
@@ -57,11 +54,12 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
-                                <li><a href="index.html"><b>Home</b></a></li>
+								<li><a href="index.html">Home</a></li>
 								<li><a href="service.html">Registration</a></li>
 								<li><a href="blog-grid.html">Appointment</a>
 								</li>
-								<li><a href="contact.html">Contact</a></li>
+                                <li><a href="contact.html"><b>Contact</b></a></li>
+
 							</ul>
 							</div><!-- /.navbar-collapse -->
 							</div><!-- /.container-fluid -->
@@ -70,92 +68,97 @@
 				</div>
 			</div>
 			</header><!-- header close -->
-
 <section class="page-title bg-2">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="block">
-          <h1>Registration</h1>
-          <p></p>
+          <h1 style="font-family: Times New Roman;!important">it is our pleasure to hearing from you</h1>
+          <p style="font-family: Times New Roman, font-size:100%;!important">Please drop your note and help us to give you better services</p>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<section class="page-wrapper">
-<div class="container">
-<div class="row">
-<div class="col-sm-4">
-<div class="block">
+<!-- contact form start -->
+<section class="contact-form">
+    <div class="container">
+        <div class="row">
+            <form id="contact-form" >
+                <div class="col-md-6 col-sm-12">
+                    <div class="block">
                         
                         <div class="form-group">
-						<strong style="font-family:Time New Roman;font-size:20px;">First Name:</strong><br>
-                            <input name="firstName" type="text" class="form-control" placeholder="Your  First Name"><br>
-							<strong style="font-family:Time New Roman;font-size:20px;">Last Name:</strong><br>
-							<input name="lastName" type="text" class="form-control" placeholder="Your   Last Name">
+                            <input name="user_name" type="text" class="form-control" placeholder="Your Name">
                         </div>
-						<div class="form-group">
-						<form>
-						<strong style="font-family:Time New Roman;font-size:20px;">Gender:</strong><br>
-						  <input type="checkbox" name="gender" value="Female"> Male<br>
-						  <input type="checkbox" name="gender2" value="Male"> Female 
-						</form>
-						</div>
-						<div class="form-group">
-						<strong style="font-family:Time New Roman;font-size:20px;">Description:</strong><br>
-						Please specify your Allergies and your medical Issues:
-                        <input name="description" type="text" class="form-control" placeholder="Description">
+                        <div class="form-group">
+                            <input name="user_email" type="text" class="form-control" placeholder="Email Address">
                         </div>
-						<div class="form-group">
-						<button type="submit" class="btn btn-success" id="Register" action="Register()" >Register</button>
-						</div>
-                        
+                        <div class="form-group">
+                            <input name="user_subject" type="text" class="form-control" placeholder="Subject">
+                        </div>
                     </div>
-</div>
-<div class="col-sm-4">
-<div class="block">
-						<div class="form-group">
-						<strong style="font-family:Time New Roman;font-size:20px;">Email:</strong><br>
-                         <input name="user_email" type="text" class="form-control" placeholder="Email Address">
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="block">
+                        <div class="form-group-2">
+                            <textarea name="user_message" class="form-control" rows="3" placeholder="Your Message"></textarea>
                         </div>
-                        <div class="form-group">
-						<strong style="font-family:Time New Roman;font-size:20px;">Phone:</strong><br>
-                        <input name="Phone" type="text" class="form-control" placeholder="Phone Number">
-                        </div>
-</div>
-</div>
-<div class="col-sm-4">
-<div class="block">
-						<div class="form-group">
-						<strong style="font-family:Time New Roman;font-size:20px;">Birthday::</strong><br>
-						<input type="date" name="birthday">
-						<input type="submit">
-                        </div>
-                        </div>
-</div>
-</div>
+                            <button class="btn btn-default" type="submit">Send Message</button>
+                    </div>
+                </div>
+                <div class="error" id="error">Sorry Msg dose not sent</div>
+                <div class="success" id="success">Message Sent</div>
+            </form>
+        </div>
+        <div class=" contact-box row">
+            <div class="col-md-6 col-sm-12">
+                <div class="block">
+                    <h2>Stop By For A visit</h2>
+                    <ul class="address-block">
+                        <li>
+                            <i class="ion-ios-location-outline"></i>2000 Saint-Catherine St W, Montreal, QC H3H 2T3
+                        </li>
+                        <li>
+                            <i class="ion-ios-email-outline"></i>Email: contact@mail.com
+                        </li>
+                        <li>
+                            <i class="ion-ios-telephone-outline"></i>Phone:+1(514) 939-2006 
+                        </li>
+                    </ul>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="http://www.collegelasalle.com/"><i class="ion-social-googleplus-outline"></i></a>
+                        </li>
+                        <li>
+                            <a href="http://www.collegelasalle.com/"><i class="ion-social-linkedin-outline"></i></a>
+                        </li>
+                        <li>
+                            <a href="http://www.collegelasalle.com/"><i class="ion-social-pinterest-outline"></i></a>
+                        </li>
+                        <li>
+                            <a href="http://www.collegelasalle.com/"><i class="ion-social-dribbble-outline"></i></a>
+                        </li>
+                        <li>
+                            <a href="http://www.collegelasalle.com/"><i class="ion-social-twitter-outline"></i></a>
+                        </li>
+                        <li>
+                            <a href="http://www.collegelasalle.com/"><i class="ion-social-facebook-outline"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="block">
+                    <h2>We Also Count In Google Map</h2>
+                    <div class="google-map">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-<!-- Call to action Start -->
-
-<section class="call-to-action bg-1 section-sm overly">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="block">
-					<h2>We offer delightful Health Care Services</h2>
-					<p>Read more about what we do and our philosophy of medication. See for yourself The work and results <br> we’ve achieved for other clients, and meet our highly experienced Team who just love to help you.</p>
-					<a class="btn btn-main btn-solid-border" href="#" >Make an Appointment</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Content Start -->
-
-
 <!-- footer Start -->
 <footer class="footer">
 	<div class="container">
@@ -169,8 +172,6 @@
 		</div>
 	</div>
 </footer>
-
-
     <!-- 
     Essential Scripts
     =====================================-->

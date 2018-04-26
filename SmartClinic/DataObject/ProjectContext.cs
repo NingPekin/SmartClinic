@@ -8,7 +8,7 @@ namespace SmartClinic.DataObject
 {
     public class ProjectContext : DbContext
     {
-        public ProjectContext()
+        public ProjectContext() : base("name=SmartClinic")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }

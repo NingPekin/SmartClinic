@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartClinic.DataObject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,20 @@ namespace SmartClinic
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+        protected void Register(object sender, EventArgs e)
+        {
+            
+            using (var db = new ProjectContext())
+            {
+
+                var labdaQuery = db.Patient.Where(u=>u.FirstName.Length > 2).ToList();
+
+                foreach (var row in labdaQuery)
+                {
+                    Response.Write(row.Email);
+                }
+            }
         }
     }
 }

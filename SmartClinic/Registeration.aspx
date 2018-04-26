@@ -34,6 +34,8 @@
 
 <body id="body">
 
+	<form id="form1" runat="server">
+
 <!-- Header Start -->
 <header class="navigation">
 	<div class="container">
@@ -57,11 +59,11 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
-                                <li><a href="index.html"><b>Home</b></a></li>
-								<li><a href="service.html">Registration</a></li>
-								<li><a href="blog-grid.html">Appointment</a>
+								<li><a href="HomePage.aspx"><b>Home</b></a></li>
+								<li><a href="Registeration.aspx">Registration</a></li>
+								<li><a href="Appointment.aspx">Appointment</a>
 								</li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="contact.aspx">Contact</a></li>
 							</ul>
 							</div><!-- /.navbar-collapse -->
 							</div><!-- /.container-fluid -->
@@ -73,14 +75,14 @@
 
 <section class="page-title bg-2">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block">
-          <h1>Registration</h1>
-          <p></p>
-        </div>
-      </div>
-    </div>
+	<div class="row">
+	  <div class="col-md-12">
+		<div class="block">
+		  <h1>Registration</h1>
+		  <p></p>
+		</div>
+	  </div>
+	</div>
   </div>
 </section>
 
@@ -89,41 +91,43 @@
 <div class="row">
 <div class="col-sm-4">
 <div class="block">
-                        
-                        <div class="form-group">
-						<strong style="font-family:Time New Roman;font-size:20px;">First Name:</strong><br>
-                            <input name="firstName" type="text" class="form-control" placeholder="Your  First Name"><br>
-							<strong style="font-family:Time New Roman;font-size:20px;">Last Name:</strong><br>
-							<input name="lastName" type="text" class="form-control" placeholder="Your   Last Name">
-                        </div>
+						
 						<div class="form-group">
-						<form>
+						<strong style="font-family:Time New Roman;font-size:20px;">First Name:</strong><br>
+							<asp:TextBox id="firstName"  class="form-control" runat="server" /><br>
+							<strong style="font-family:Time New Roman;font-size:20px;">Last Name:</strong><br>
+							<asp:TextBox id="lastName"  class="form-control" runat="server" /><br>
+
+						</div>
+						<div class="form-group">
 						<strong style="font-family:Time New Roman;font-size:20px;">Gender:</strong><br>
 						  <input type="checkbox" name="gender" value="Female"> Male<br>
 						  <input type="checkbox" name="gender2" value="Male"> Female 
-						</form>
 						</div>
 						<div class="form-group">
 						<strong style="font-family:Time New Roman;font-size:20px;">Description:</strong><br>
 						Please specify your Allergies and your medical Issues:
-                        <input name="description" type="text" class="form-control" placeholder="Description">
-                        </div>
-						<div class="form-group">
-						<button type="submit" class="btn btn-success" id="Register" action="Register()" >Register</button>
+						<input name="description" type="text" class="form-control" placeholder="Description">
 						</div>
-                        
-                    </div>
+						<div class="form-group">
+						
+<asp:Button ID="Button1" runat="server" Text="Register" OnClick="Register" />
+						</div>
+						
+					</div>
 </div>
 <div class="col-sm-4">
 <div class="block">
 						<div class="form-group">
 						<strong style="font-family:Time New Roman;font-size:20px;">Email:</strong><br>
-                         <input name="user_email" type="text" class="form-control" placeholder="Email Address">
-                        </div>
-                        <div class="form-group">
+						
+						<asp:TextBox id="user_email"  class="form-control" runat="server" />
+						</div>
+						<div class="form-group">
 						<strong style="font-family:Time New Roman;font-size:20px;">Phone:</strong><br>
-                        <input name="Phone" type="text" class="form-control" placeholder="Phone Number">
-                        </div>
+						
+							<asp:TextBox id="phone"  class="form-control" runat="server" />
+						</div>
 </div>
 </div>
 <div class="col-sm-4">
@@ -132,9 +136,10 @@
 						<strong style="font-family:Time New Roman;font-size:20px;">Birthday::</strong><br>
 						<input type="date" name="birthday">
 						<input type="submit">
-                        </div>
-                        </div>
+						</div>
+						</div>
 </div>
+	
 </div>
 </section>
 <!-- Call to action Start -->
@@ -171,39 +176,44 @@
 </footer>
 
 
-    <!-- 
-    Essential Scripts
-    =====================================-->
-    
-    <!-- <script src="js/jquery.counterup.js"></script> -->
-    
-    <!-- Main jQuery -->
+	<!-- 
+	Essential Scripts
+	=====================================-->
+	
+	<!-- <script src="js/jquery.counterup.js"></script> -->
+	
+	<!-- Main jQuery -->
    
-    <script src="https://code.jquery.com/jquery-git.min.js"></script>
-    <!-- Bootstrap 3.1 -->
-    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <!-- Owl Carousel -->
-    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
-    <!--  -->
-    <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-    <!-- Mixit Up JS -->
-    <script src="plugins/mixitup/dist/mixitup.min.js"></script>
-    <!-- <script src="plugins/count-down/jquery.lwtCountdown-1.0.js"></script> -->
-    <script src="plugins/SyoTimer/build/jquery.syotimer.min.js"></script>
+	<script src="https://code.jquery.com/jquery-git.min.js"></script>
+	<!-- Bootstrap 3.1 -->
+	<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- Owl Carousel -->
+	<script src="plugins/slick-carousel/slick/slick.min.js"></script>
+	<!--  -->
+	<script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+	<!-- Mixit Up JS -->
+	<script src="plugins/mixitup/dist/mixitup.min.js"></script>
+	<!-- <script src="plugins/count-down/jquery.lwtCountdown-1.0.js"></script> -->
+	<script src="plugins/SyoTimer/build/jquery.syotimer.min.js"></script>
 
 
-    <!-- Form Validator -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+	<!-- Form Validator -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
 
 
-    
-    <!-- Google Map -->
-    <script src="plugins/google-map/map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
+	
+	<!-- Google Map -->
+	<script src="plugins/google-map/map.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
 
-    <script src="js/script.js"></script>
-    
+	<script src="js/script.js"></script>
+	
+
+
+
+	</form>
+	
 
 
 

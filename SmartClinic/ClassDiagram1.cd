@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="SmartClinic.Bus.EnumType">
+    <Position X="6.25" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="SmartClinic.Bus.EnumType.UserType">
+        <TypeIdentifier>
+          <NewMemberFileName>Bus\EnumType.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="SmartClinic.Bus.EnumType.Gender">
+        <TypeIdentifier>
+          <NewMemberFileName>Bus\EnumType.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bus\EnumType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartClinic.Data.AppointmentDB">
+    <Position X="2.25" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAIAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\AppointmentDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartClinic.Data.DoctorDB">
+    <Position X="0.5" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\DoctorDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartClinic.Data.OccupiedTimeDB">
+    <Position X="8.5" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Data\OccupiedTimeDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartClinic.Data.PatientDB">
+    <Position X="2.75" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQABAgAAAAAABAAAAAAABAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Data\PatientDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartClinic.Data.ReceptionistDB">
+    <Position X="0.75" Y="6" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAQBAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\ReceptionistDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartClinic.Data.Tools">
+    <Position X="8.25" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Tools.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartClinic.DataObject.Appointment">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAACQA=</HashCode>
+      <FileName>DataObject\Appointment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartClinic.DataObject.Doctor">
+    <Position X="0.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataObject\Doctor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartClinic.DataObject.OccupiedTime">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAQA=</HashCode>
+      <FileName>DataObject\OccupiedTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartClinic.DataObject.Patient">
+    <Position X="5.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAACAgAACAAAAAQAAAAAAAAAACAAAABAAAAAg=</HashCode>
+      <FileName>DataObject\Patient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartClinic.DataObject.ProjectContext">
+    <Position X="8.25" Y="2.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAQAAAAAQAAAAAAAAACAA=</HashCode>
+      <FileName>DataObject\ProjectContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartClinic.DataObject.Receptionist">
+    <Position X="4" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAg=</HashCode>
+      <FileName>DataObject\Receptionist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -124,14 +124,21 @@ namespace SmartClinic
                 //    Response.Write(string.Format("{0}-{1}-{2}", row.Date, row.Time, row.Doctor.Id));
                 //}
 
-            //==========================================
+                //==========================================
                 //test GetReceptionistByEmail
 
                 //var re = ReceptionistDB.GetReceptionistByEmail("admin@admin.ca");
 
                 //Response.Write(re.FirstName);
-         
-            //================================
+
+                //================================
+                //test valid appointmnet
+                //var appointment = db.Appointment.Find(5);
+
+                //var validappointment = PatientDB.ValidAppointment(appointment);
+                //Response.Write(validappointment);
+
+            //======================================
 
             }
         }

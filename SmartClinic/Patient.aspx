@@ -85,7 +85,7 @@
                     <p>Please select the Appointment from the list below.</p>
                     <b>Doctor Name:</b>
                     <br>
-                    <select name="DropDownListDoctor" id="DropDownListDoctor">
+                    <select name="DropDownListDoctor" id="DropDownListDoctor" class="form-control">
                         <option value="-1">Select Doctor</option>
                         <option value="2">Ning Wei</option>
                         <option value="3">Farzaneh fallahi</option>

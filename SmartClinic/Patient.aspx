@@ -56,7 +56,7 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
-                                <li><a href="Homepage.aspx"><b>Home</b></a></li>
+								<li><a href="Homepage.aspx"><b>Home</b></a></li>
 								<li><a href="service.html">Registration</a></li>
 								<li><a href="blog-grid.html">Appointment</a>
 								</li>
@@ -70,69 +70,69 @@
 			</div>
 			</header><!-- header close -->
  <!-- startBody-->
-    <div class="jumbotron text-center">
-        <h2>Samart Clinic Appointment</h2>
-    </div>
-    <div class="container">
-        <form runat="server">
-            <div class="row">
-                <div class="col-sm-4">
+	<div class="jumbotron text-center">
+		<h2>Samart Clinic Appointment</h2>
+	</div>
+	<div class="container">
+		<form runat="server">
+			<div class="row">
+				<div class="col-sm-4">
 
-                    <h3><b><mark>Appointments</mark></b></h3>
-                    <p>Please select the Appointment from the list below.</p>
-                    Doctor Name<br />
-                    <input type="text" id="ProjectCode" class="form-control" runat="server" /><br />
-                     Project Due date:<br />
-                    <div class="input-group date" id="datetimepicker1">
-                        <input type="text" class="form-control" id="SelectedDate" runat="server" />
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
-                    <div class="row" style="padding-top:10px;">
-                        <div class="col-lg-4">
-                            <asp:Button CssClass="btn btn-success" ID="btnSaveData" runat="server" OnClick="btnSaveData_Click" Text="Save Appointment"></asp:Button>
-                        </div>
-                        <div class="col-lg-3">
-                            <asp:Button CssClass="btn btn-danger" ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Delete Appointment"></asp:Button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <h3>List of Avalabilities</h3>
-                    <asp:Literal runat="server" ID="grid"></asp:Literal>
-                </div>
-            </div>
-        </form>
-    </div>
+					<h3><b><mark>Appointments</mark></b></h3>
+					<p>Please select the Appointment from the list below.</p>
+					Doctor Name<br />
+					<input type="text" id="ProjectCode" class="form-control" runat="server" /><br />
+					 Project Due date:<br />
+					<div class="input-group date" id="datetimepicker1">
+						<input type="text" class="form-control" id="SelectedDate" runat="server" />
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</span>
+					</div>
+					<div class="row" style="padding-top:10px;">
+						<div class="col-lg-4">
+							<asp:Button CssClass="btn btn-success" ID="btnSaveData" runat="server" Text="Save Appointment"></asp:Button>
+						</div>
+						<div class="col-lg-3">
+							<asp:Button CssClass="btn btn-danger" ID="btnDelete" runat="server"  Text="Delete Appointment"></asp:Button>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<h3>List of Avalabilities</h3>
+					<asp:Literal runat="server" ID="grid"></asp:Literal>
+				</div>
+			</div>
+		</form>
+	</div>
 
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-    <script type="text/javascript" src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('#datetimepicker1,#datetimepicker2').datetimepicker({
-                format: "YYYY-MM-DD"
-            });
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+	<script type="text/javascript" src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('#datetimepicker1,#datetimepicker2').datetimepicker({
+				format: "YYYY-MM-DD"
+			});
 
-            $('#btnDelete').click(function (e) {
-                return getConfirm($('#ProjectCode'));
-            });
-        });
+			$('#btnDelete').click(function (e) {
+				return getConfirm($('#ProjectCode'));
+			});
+		});
 
-        function showData(a, b, c) {
-            $('#ProjectCode').val(a);
-            $('#ProjectTitle').val(b);
-            $('#SelectedDate').val(c);
-        }
+		function showData(a, b, c) {
+			$('#ProjectCode').val(a);
+			$('#ProjectTitle').val(b);
+			$('#SelectedDate').val(c);
+		}
 
-        function getConfirm(a) {
-            return confirm("Are you sure you want to remove this project ?");
-        }
-    </script>
+		function getConfirm(a) {
+			return confirm("Are you sure you want to remove this project ?");
+		}
+	</script>
  <!--EndBody-->
 
-    </body>
+	</body>
 
 </html>

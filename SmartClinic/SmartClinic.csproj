@@ -316,13 +316,7 @@
     <Compile Include="Appointment.aspx.designer.cs">
       <DependentUpon>Appointment.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Bus\Appointment.cs" />
-    <Compile Include="Bus\Doctor.cs" />
     <Compile Include="Bus\EnumType.cs" />
-    <Compile Include="Bus\OccupiedTime.cs" />
-    <Compile Include="Bus\Patient.cs" />
-    <Compile Include="Bus\Person.cs" />
-    <Compile Include="Bus\Receptionist.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -341,7 +335,6 @@
     <Compile Include="Data\DoctorDB.cs" />
     <Compile Include="Data\OccupiedTimeDB.cs" />
     <Compile Include="Data\PatientDB.cs" />
-    <Compile Include="Data\PersonDB.cs" />
     <Compile Include="Data\ReceptionistDB.cs" />
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>

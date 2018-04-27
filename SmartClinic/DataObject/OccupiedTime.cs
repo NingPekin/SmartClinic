@@ -10,7 +10,6 @@ namespace SmartClinic.DataObject
     public class OccupiedTime
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public int OccupiedId { get; set; }
         public DateTime Date { get; set; }
         public String Time { get; set; }

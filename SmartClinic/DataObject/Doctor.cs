@@ -10,7 +10,6 @@ namespace SmartClinic.DataObject
     public class Doctor
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public int Id { get; set; }
         public String Name { get; set; }
         public String Department { get; set; }

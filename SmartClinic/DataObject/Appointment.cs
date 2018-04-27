@@ -10,7 +10,6 @@ namespace SmartClinic.DataObject
     public class Appointment
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public int Id { get; set; }
         //public int PatientId { get; set; }
         //public int DocterId { get; set; }

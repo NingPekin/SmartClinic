@@ -395,6 +395,10 @@
     <Compile Include="Migrations\201804270104401_1.0-Fix-Table-Identity.Designer.cs">
       <DependentUpon>201804270104401_1.0-Fix-Table-Identity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804270157189_1.0_Empty.cs" />
+    <Compile Include="Migrations\201804270157189_1.0_Empty.Designer.cs">
+      <DependentUpon>201804270157189_1.0_Empty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201804270513429_add_availabletime.cs" />
     <Compile Include="Migrations\201804270513429_add_availabletime.Designer.cs">
       <DependentUpon>201804270513429_add_availabletime.cs</DependentUpon>
@@ -456,6 +460,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804270104401_1.0-Fix-Table-Identity.resx">
       <DependentUpon>201804270104401_1.0-Fix-Table-Identity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804270157189_1.0_Empty.resx">
+      <DependentUpon>201804270157189_1.0_Empty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804270513429_add_availabletime.resx">
       <DependentUpon>201804270513429_add_availabletime.cs</DependentUpon>

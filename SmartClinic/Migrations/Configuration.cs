@@ -14,10 +14,15 @@ namespace SmartClinic.Migrations
 
         protected override void Seed(SmartClinic.DataObject.ProjectContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+
+            //Add Default Doctors
+            context.Doctor.AddOrUpdate(a => a.Id,
+                new DataObject.Doctor() { Name = "Zohreh Moeini", Department="Sergury"},
+                new DataObject.Doctor() { Name = "Farzaneh Fallahi", Department="Cardiologist" },
+                new DataObject.Doctor() { Name = "Ning Wei", Department= "Pediatrix" }
+                );
         }
     }
 }

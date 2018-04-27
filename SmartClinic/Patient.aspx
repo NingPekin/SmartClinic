@@ -86,15 +86,10 @@
                     <b>Doctor Name:</b>
                     <br>
                     <select name="DropDownListDoctor" id="DropDownListDoctor" class="form-control">
-                        <option value="-1">Select Doctor</option>
-                        <option value="2">Ning Wei</option>
-                        <option value="3">Farzaneh fallahi</option>
-                        <option value="4">Zohreh Moeini</option>
-                        <option value="5">Abdul Sadigh</option>
-                        <option value="6">Manpreet kaur</option>
-
+                        <option value="0">Select Doctor</option>
+                        <asp:Literal runat="server" ID="doctorsList"></asp:Literal>
                     </select><br>
-                    
+
                     <br>
                     <b>Date:</b>
                     <br>
@@ -106,13 +101,24 @@
                     </div>
                     <div class="row" style="padding-top: 10px;">
                         <div class="col-lg-2">
-                            <input type="submit" name="showAvalability" value="Show Avalibility" id="showAvalability" class="btn btn-info"><br>
+                            <input type="button" name="showAvalability" value="Show Avalibility" id="showAvalability" class="btn btn-info"><br>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <h3>List of Avalabilities</h3>
-                    <asp:Literal runat="server" ID="grid"></asp:Literal>
+                    <table class="table table-bordered table-hover" id="tableBodyHead">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <table class="table table-bordered table-hover" id="tableBody">
+                        <tr></tr>
+                    </table>
                 </div>
             </div>
             <div class="row">
@@ -161,13 +167,46 @@
     <script type="text/javascript">
         $(function () {
             $('#datetimepicker1,#datetimepicker2').datetimepicker({
-                format: "YYYY-MM-DD"
+                format: "YYYY-MM-DD",
+                minDate: moment().add(-1, 'd').toDate(),
             });
 
             $('#btnDelete').click(function (e) {
                 return getConfirm($('#ProjectCode'));
             });
+
+            //Ajax Request : Get Availability
+            $('#showAvalability').click(function () {
+                var doctorId = $('#DropDownListDoctor').find(":selected").val();
+                var selectedDate = $('#SelectedDate').val();
+
+                $.getJSON("api/mainapi.aspx", { action: "getAvailableTime", id: doctorId, date: selectedDate })
+                    .done(function (json) {
+                        var data = json;
+                        $('#tableBody tr').empty();
+
+                        for (var i = 0; i < data.length; i++) {
+                            $('#tableBody tr:last').after("<tr><td width='35%'>" + data[i].Date.replace('T00:00:00', '') + "</td><td>" + data[i].Time + "</td><td><input type='button' id='btnSelectApp" + i + "' sDate='" + data[i].Date + "' sTime='" + data[i].Time + "' sId='" + doctorId + "' class='btnselectapp btn btn-primary' value='Select' /></td></tr>");
+                        }
+
+                    })
+                    .fail(function (jqxhr, textStatus, error) {
+                        var err = textStatus + ", " + error;
+                        console.log("Request Failed: " + err);
+                    });
+            });
+
+            $('body').on('click', '.btnselectapp', function () {
+                var sdate = $(this)[0].attributes.getNamedItem('sDate').value;
+                var stime = $(this)[0].attributes.getNamedItem('sTime').value
+                var sid = $(this)[0].attributes.getNamedItem('sId').value
+
+                $('#DoctorId').val($('#DropDownListDoctor').find(":selected").text());
+                $('#Date').val(sdate.replace('T00:00:00', ''));
+                $('#Hour').val(stime);
+            });
         });
+
 
         function showData(a, b, c) {
             $('#ProjectCode').val(a);

@@ -16,7 +16,6 @@ namespace SmartClinic
 
             using (var db = new ProjectContext())
             {
-
                 //======================================
                 //Example of adding row 
                 //======================================
@@ -96,13 +95,50 @@ namespace SmartClinic
 
                 //=============================
                 //test GetAppointmentByDoctor
-            
-               var list= AppointmentDB.GetAppointmentByDoctors(1);
-                foreach(var row in list)
-                {
-                    Response.Write(string.Format("{0}-{1}",  row.Date, row.Time));
-                }
 
+                //var list= AppointmentDB.GetAppointmentByDoctors(1);
+                // foreach(var row in list)
+                // {
+                //     Response.Write(string.Format("{0}-{1}-{2}",  row.Date, row.Time,row.Patient.Id));
+                // }
+
+                //===============================================
+
+
+                //test GetAppointmentByPatient
+
+                //var list = AppointmentDB.GetAppointmentByPatients(4);
+                //foreach (var row in list)
+                //{
+                //    Response.Write(string.Format("{0}-{1}-{2}", row.Date, row.Time, row.Patient.Id));
+                //}
+
+
+
+                //test GetOccupiedTimeByDoctor
+
+                //var doctor = db.Doctor.Find(1);                
+                //var list = OccupiedTimeDB.GetOccupiedTimeByDoctor(doctor);
+                //foreach (var row in list)
+                //{
+                //    Response.Write(string.Format("{0}-{1}-{2}", row.Date, row.Time, row.Doctor.Id));
+                //}
+
+                //==========================================
+                //test GetReceptionistByEmail
+
+                //var re = ReceptionistDB.GetReceptionistByEmail("admin@admin.ca");
+
+                //Response.Write(re.FirstName);
+
+                //================================
+                //test valid appointmnet
+                //var appointment = db.Appointment.Find(5);
+
+                //var validappointment = PatientDB.ValidAppointment(appointment);
+                //Response.Write(validappointment);
+
+            //======================================
 
             }
         }

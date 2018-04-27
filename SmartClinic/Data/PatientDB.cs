@@ -13,17 +13,6 @@ namespace SmartClinic.Data
     public class PatientDB
     {
 
-        //insert new appointment into db
-        //public static void CreateAppointment(Appointment appointment)
-        //{
-
-        //}
-
-        //public void CancelAppointment(Appointment appointment)
-        //{
-
-        //}
-
         public static DataObject.Patient GetPatientById(int id)
         {
             using (var db = new ProjectContext())
@@ -65,26 +54,65 @@ namespace SmartClinic.Data
 
         }
         /// <summary>
-        /// make appointment,add to list and update db
+        /// make appointment and set it to occupied time
         /// </summary>
         /// <param name="appointment">object of appointment</param>
 
-        //pass object appointment
+        //pass object appointment,
         //process create new appointment 
-        public void CreateAppointment(DataObject.Appointment appointment)
+        public static void CreateAppointment(DataObject.Appointment appointment)
         {
             //AppointmentCollection.AddAppointmentToList(appointment);
             using (var db = new ProjectContext())
             {
                 db.Appointment.Add(appointment);
+                var doctor = appointment.Doctor;
+                var occupied = new OccupiedTime { Date = appointment.Date, Time = appointment.Time, Doctor = doctor };
+                db.OccupiedTime.Add(occupied);
                 db.SaveChanges();
             }
 
         }
 
+        public static bool DuplicatedAppointment(DataObject.Appointment appointment)
+        {
+            using (var db = new ProjectContext())
+            {
+                bool isValid = false;
+                var app = db.Appointment.Where(o => o.Time == appointment.Time && o.Date == appointment.Date).FirstOrDefault();
+                if (app != null)
+                {
+                    isValid = true;
+                }
+
+                return isValid;
+            }
+        }
+
+        /// <summary>
+        /// check if appointemnt date and time is occupied 
+        /// </summary>
+        /// <param name="appointment"></param>
+        /// return boolean
+        public static bool ValidAppointment(DataObject.Appointment appointment)
+        {
+            using (var db = new ProjectContext())
+            {
+                bool isValid = false;
+               var occ= db.OccupiedTime.Where(o => o.Time == appointment.Time && o.Date == appointment.Date).FirstOrDefault();
+                if(occ==null)
+                {
+                    isValid = true;
+                }
+
+                return isValid;
+            }
+
+        }           
+
         //pass object appoinment
         //remove appointment from list 
-        public void CancelAppointment(DataObject.Appointment appointment)
+        public static void CancelAppointment(DataObject.Appointment appointment)
         {
             //AppointmentCollection.RemoveAppointmentToList(appointment);
             using (var db = new ProjectContext())

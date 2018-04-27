@@ -58,7 +58,7 @@
 								<li><a href="service.html">Registration</a></li>
 								<li><a href="blog-grid.html">Appointment</a>
 								</li>
-                                <li><a href="contact.html"><b>Contact</b></a></li>
+								<li><a href="contact.html"><b>Contact</b></a></li>
 
 							</ul>
 							</div><!-- /.navbar-collapse -->
@@ -70,94 +70,94 @@
 			</header><!-- header close -->
 <section class="page-title bg-2">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block">
-          <h1 style="font-family: Times New Roman;!important">it is our pleasure to hearing from you</h1>
-          <p style="font-family: Times New Roman, font-size:100%;!important">Please drop your note and help us to give you better services</p>
-        </div>
-      </div>
-    </div>
+	<div class="row">
+	  <div class="col-md-12">
+		<div class="block">
+		  <h1 style="font-family: Times New Roman;!important">it is our pleasure to hearing from you</h1>
+		  <p style="font-family: Times New Roman, font-size:100%;!important">Please drop your note and help us to give you better services</p>
+		</div>
+	  </div>
+	</div>
   </div>
 </section>
 <!-- contact form start -->
 <section class="contact-form">
-    <div class="container">
-        <div class="row">
-            <form id="contact-form" >
-                <div class="col-md-6 col-sm-12">
-                    <div class="block">
-                        
-                        <div class="form-group">
-                            <input name="user_name" type="text" class="form-control" placeholder="Your Name">
-                        </div>
-                        <div class="form-group">
-                            <input name="user_email" type="text" class="form-control" placeholder="Email Address">
-                        </div>
-                        <div class="form-group">
-                            <input name="user_subject" type="text" class="form-control" placeholder="Subject">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                    <div class="block">
-                        <div class="form-group-2">
-                            <textarea name="user_message" class="form-control" rows="3" placeholder="Your Message"></textarea>
-                        </div>
-                            <button class="btn btn-default" type="submit">Send Message</button>
-                    </div>
-                </div>
-                <div class="error" id="error">Sorry Msg dose not sent</div>
-                <div class="success" id="success">Message Sent</div>
-            </form>
-        </div>
-        <div class=" contact-box row">
-            <div class="col-md-6 col-sm-12">
-                <div class="block">
-                    <h2>Stop By For A visit</h2>
-                    <ul class="address-block">
-                        <li>
-                            <i class="ion-ios-location-outline"></i>2000 Saint-Catherine St W, Montreal, QC H3H 2T3
-                        </li>
-                        <li>
-                            <i class="ion-ios-email-outline"></i>Email: contact@mail.com
-                        </li>
-                        <li>
-                            <i class="ion-ios-telephone-outline"></i>Phone:+1(514) 939-2006 
-                        </li>
-                    </ul>
-                    <ul class="social-icons">
-                        <li>
-                            <a href="http://www.collegelasalle.com/"><i class="ion-social-googleplus-outline"></i></a>
-                        </li>
-                        <li>
-                            <a href="http://www.collegelasalle.com/"><i class="ion-social-linkedin-outline"></i></a>
-                        </li>
-                        <li>
-                            <a href="http://www.collegelasalle.com/"><i class="ion-social-pinterest-outline"></i></a>
-                        </li>
-                        <li>
-                            <a href="http://www.collegelasalle.com/"><i class="ion-social-dribbble-outline"></i></a>
-                        </li>
-                        <li>
-                            <a href="http://www.collegelasalle.com/"><i class="ion-social-twitter-outline"></i></a>
-                        </li>
-                        <li>
-                            <a href="http://www.collegelasalle.com/"><i class="ion-social-facebook-outline"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-12">
-                <div class="block">
-                    <h2>We Also Count In Google Map</h2>
-                    <div class="google-map">
-                        <div id="map"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<form id="contact-form" >
+				<div class="col-md-6 col-sm-12">
+					<div class="block">
+						
+						<div class="form-group">
+							<input name="user_name" type="text" class="form-control" placeholder="Your Name">
+						</div>
+						<div class="form-group">
+							<input name="user_email" type="text" class="form-control" placeholder="Email Address">
+						</div>
+						<div class="form-group">
+							<input name="user_subject" type="text" class="form-control" placeholder="Subject">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="block">
+						<div class="form-group-2">
+							<textarea name="user_message" class="form-control" rows="3" placeholder="Your Message"></textarea>
+						</div>
+							<button class="btn btn-default" type="submit">Send Message</button>
+					</div>
+				</div>
+				<div class="error" id="error">Sorry Msg dose not sent</div>
+				<div class="success" id="success">Message Sent</div>
+			</form>
+		</div>
+		<div class=" contact-box row">
+			<div class="col-md-6 col-sm-12">
+				<div class="block">
+					<h2>Stop By For A visit</h2>
+					<ul class="address-block">
+						<li>
+							<i class="ion-ios-location-outline"></i>2000 Saint-Catherine St W, Montreal, QC H3H 2T3
+						</li>
+						<li>
+							<i class="ion-ios-email-outline"></i>Email: contact@mail.com
+						</li>
+						<li>
+							<i class="ion-ios-telephone-outline"></i>Phone:+1(514) 939-2006 
+						</li>
+					</ul>
+					<ul class="social-icons">
+						<li>
+							<a href="http://www.collegelasalle.com/"><i class="ion-social-googleplus-outline"></i></a>
+						</li>
+						<li>
+							<a href="http://www.collegelasalle.com/"><i class="ion-social-linkedin-outline"></i></a>
+						</li>
+						<li>
+							<a href="http://www.collegelasalle.com/"><i class="ion-social-pinterest-outline"></i></a>
+						</li>
+						<li>
+							<a href="http://www.collegelasalle.com/"><i class="ion-social-dribbble-outline"></i></a>
+						</li>
+						<li>
+							<a href="http://www.collegelasalle.com/"><i class="ion-social-twitter-outline"></i></a>
+						</li>
+						<li>
+							<a href="http://www.collegelasalle.com/"><i class="ion-social-facebook-outline"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="block">
+					<h2>We Also Count In Google Map</h2>
+					<div class="google-map">
+						<div id="map"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 <!-- footer Start -->
 <footer class="footer">
@@ -172,39 +172,39 @@
 		</div>
 	</div>
 </footer>
-    <!-- 
-    Essential Scripts
-    =====================================-->
-    
-    <!-- <script src="js/jquery.counterup.js"></script> -->
-    
-    <!-- Main jQuery -->
+	<!-- 
+	Essential Scripts
+	=====================================-->
+	
+	<!-- <script src="js/jquery.counterup.js"></script> -->
+	
+	<!-- Main jQuery -->
    
-    <script src="https://code.jquery.com/jquery-git.min.js"></script>
-    <!-- Bootstrap 3.1 -->
-    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <!-- Owl Carousel -->
-    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
-    <!--  -->
-    <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-    <!-- Mixit Up JS -->
-    <script src="plugins/mixitup/dist/mixitup.min.js"></script>
-    <!-- <script src="plugins/count-down/jquery.lwtCountdown-1.0.js"></script> -->
-    <script src="plugins/SyoTimer/build/jquery.syotimer.min.js"></script>
+	<script src="https://code.jquery.com/jquery-git.min.js"></script>
+	<!-- Bootstrap 3.1 -->
+	<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- Owl Carousel -->
+	<script src="plugins/slick-carousel/slick/slick.min.js"></script>
+	<!--  -->
+	<script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+	<!-- Mixit Up JS -->
+	<script src="plugins/mixitup/dist/mixitup.min.js"></script>
+	<!-- <script src="plugins/count-down/jquery.lwtCountdown-1.0.js"></script> -->
+	<script src="plugins/SyoTimer/build/jquery.syotimer.min.js"></script>
 
 
-    <!-- Form Validator -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+	<!-- Form Validator -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
 
 
-    
-    <!-- Google Map -->
-    <script src="plugins/google-map/map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
+	
+	<!-- Google Map -->
+	<script src="plugins/google-map/map.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
 
-    <script src="js/script.js"></script>
-    
+	<script src="js/script.js"></script>
+	
 
 
 

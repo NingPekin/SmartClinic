@@ -8,7 +8,7 @@ namespace SmartClinic.DataObject
 {
     public class ProjectContext : DbContext
     {
-        public ProjectContext()
+        public ProjectContext() : base("name=SmartClinic")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }
@@ -19,6 +19,7 @@ namespace SmartClinic.DataObject
 
         public DbSet<Appointment> Appointment { get; set; }
         public DbSet<OccupiedTime> OccupiedTime { get; set; }
+        public DbSet<AvailableTime> AvailableTime { get; set; }
 
         //public DbSet<User> User { get; set; }
     }

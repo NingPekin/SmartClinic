@@ -138,10 +138,11 @@
                     Hour:<br>
                     <input name="Hour" type="text" id="Hour" class="form-control">
                 </div>
+                <input type="hidden" id="doctorId" />
                 <div class="col-sm-3" style="margin-bottom: 30px">
                     <br>
                     <br>
-                    <input type="submit" name="Button1" value="Save Avalibility" id="Button1" class="btn btn-info"><br>
+                    <input type="button" name="btnSave" value="Save Avalibility" id="Button1" class="btn btn-info"><br>
                 </div>
             </div>
         </form>
@@ -177,25 +178,10 @@
 
             //Ajax Request : Get Availability
             $('#showAvalability').click(function () {
-                var doctorId = $('#DropDownListDoctor').find(":selected").val();
-                var selectedDate = $('#SelectedDate').val();
-
-                $.getJSON("api/mainapi.aspx", { action: "getAvailableTime", id: doctorId, date: selectedDate })
-                    .done(function (json) {
-                        var data = json;
-                        $('#tableBody tr').empty();
-
-                        for (var i = 0; i < data.length; i++) {
-                            $('#tableBody tr:last').after("<tr><td width='35%'>" + data[i].Date.replace('T00:00:00', '') + "</td><td>" + data[i].Time + "</td><td><input type='button' id='btnSelectApp" + i + "' sDate='" + data[i].Date + "' sTime='" + data[i].Time + "' sId='" + doctorId + "' class='btnselectapp btn btn-primary' value='Select' /></td></tr>");
-                        }
-
-                    })
-                    .fail(function (jqxhr, textStatus, error) {
-                        var err = textStatus + ", " + error;
-                        console.log("Request Failed: " + err);
-                    });
+                GetAvailableHours();
             });
 
+            //On Select
             $('body').on('click', '.btnselectapp', function () {
                 var sdate = $(this)[0].attributes.getNamedItem('sDate').value;
                 var stime = $(this)[0].attributes.getNamedItem('sTime').value
@@ -204,8 +190,35 @@
                 $('#DoctorId').val($('#DropDownListDoctor').find(":selected").text());
                 $('#Date').val(sdate.replace('T00:00:00', ''));
                 $('#Hour').val(stime);
+                $('#doctorId').val(sid);
+            });
+
+            //On Save
+            $('#btnSave').click(function () {
+
             });
         });
+
+        //Get Available Hours
+        function GetAvailableHours() {
+            var doctorId = $('#DropDownListDoctor').find(":selected").val();
+            var selectedDate = $('#SelectedDate').val();
+
+            $.getJSON("api/mainapi.aspx", { action: "getAvailableTime", id: doctorId, date: selectedDate })
+                .done(function (json) {
+                    var data = json;
+                    $('#tableBody tr').empty();
+
+                    for (var i = 0; i < data.length; i++) {
+                        $('#tableBody tr:last').after("<tr><td width='35%'>" + data[i].Date.replace('T00:00:00', '') + "</td><td>" + data[i].Time + "</td><td><input type='button' id='btnSelectApp" + i + "' sDate='" + data[i].Date + "' sTime='" + data[i].Time + "' sId='" + doctorId + "' class='btnselectapp btn btn-primary' value='Select' /></td></tr>");
+                    }
+
+                })
+                .fail(function (jqxhr, textStatus, error) {
+                    var err = textStatus + ", " + error;
+                    console.log("Request Failed: " + err);
+                });
+        }
 
 
         function showData(a, b, c) {

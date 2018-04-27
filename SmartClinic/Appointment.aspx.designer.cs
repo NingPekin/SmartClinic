@@ -10,6 +10,6 @@
 namespace SmartClinic {
     
     
-    public partial class Receptionist {
+    public partial class Appointment {
     }
 }

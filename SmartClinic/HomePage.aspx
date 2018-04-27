@@ -59,7 +59,7 @@
 							<ul class="nav navbar-nav navbar-right">
 								<li><a href="Homepage.aspx"><b>Home</b></a></li>
 								<li><a href="Registeration.aspx">Registration</a></li>
-								<li><a href="blog-grid.html">Appointment</a>
+								<li><a href="Appointment.aspx">Appointment</a>
 								</li>
 								<li><a href="Contact.aspx">Contact</a></li>
 							</ul>
@@ -78,7 +78,7 @@
 			<div class="col-md-12">
 				<div class="block">
 					<h1 class="animated fadeInUp"> <b>The Smart Clinic</b></h1>
-					<p class="animated fadeInUp">We provide the best possible health care to our patients in Mission </br>  Committed to Caring</p>
+					<p class="animated fadeInUp">We provide the best possible health care to our patients in Mission   Committed to Caring</p>
 					
 				</div>
 			</div>

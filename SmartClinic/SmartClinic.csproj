@@ -402,9 +402,9 @@
     <Compile Include="Migrations\201804270157189_1.0_Empty.Designer.cs">
       <DependentUpon>201804270157189_1.0_Empty.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804270513429_add_availabletime.cs" />
-    <Compile Include="Migrations\201804270513429_add_availabletime.Designer.cs">
-      <DependentUpon>201804270513429_add_availabletime.cs</DependentUpon>
+    <Compile Include="Migrations\201804270513429_1.0-add_availabletime.cs" />
+    <Compile Include="Migrations\201804270513429_1.0-add_availabletime.Designer.cs">
+      <DependentUpon>201804270513429_1.0-add_availabletime.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Patient.aspx.cs">
@@ -467,8 +467,8 @@
     <EmbeddedResource Include="Migrations\201804270157189_1.0_Empty.resx">
       <DependentUpon>201804270157189_1.0_Empty.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804270513429_add_availabletime.resx">
-      <DependentUpon>201804270513429_add_availabletime.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804270513429_1.0-add_availabletime.resx">
+      <DependentUpon>201804270513429_1.0-add_availabletime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

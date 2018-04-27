@@ -150,6 +150,7 @@
 </div>
 	
 </div>
+</div>
 </section>
 <!-- Call to action Start -->
 

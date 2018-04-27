@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Appointment.aspx.cs" Inherits="SmartClinic.Appointment" %>
 
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Receptionist.aspx.cs" Inherits="SmartClinic.Receptionist" %>
+
 
 <!DOCTYPE html>
 
@@ -59,11 +59,11 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
-								<li><a href="index.html"><b>Home</b></a></li>
-								<li><a href="service.html">Registration</a></li>
-								<li><a href="blog-grid.html">Appointment</a>
+								<li><a href="HomePage.aspx"><b>Home</b></a></li>
+								<li><a href="Registration.aspx">Registration</a></li>
+								<li><a href="Appointment.aspx">Appointment</a>
 								</li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="Contact.aspx">Contact</a></li>
 							</ul>
 							</div><!-- /.navbar-collapse -->
 							</div><!-- /.container-fluid -->
@@ -103,7 +103,7 @@
 				<div class="modal-footer">
 				  <div id="total" style="font-size:20px; color:darkblue; float:left;"></div>
 				  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-				  <button type="submit" class="btn btn-success" id="subscribebtn" action="onclick()" value="2">Login</button>
+				  <button type="submit" class="btn btn-success" id="subscribebtn"  value="2">Login</button>
 				</div>
 		  </div>
 		</form>
@@ -126,8 +126,8 @@
 				<div class="post">
 				<img class="img-responsive" src="images/blog/blog-post-2.jpg" alt=""><br>
 				<p> feel free to Make your appointment based on your schedule</P><br>
-				<a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info">Login</a>
-				<a href="" class="btn btn-info">SignUp</a>
+				<a href="Registration.aspx" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info">Login</a>
+				<a href="Registration.aspx" class="btn btn-info">SignUp</a>
 			</div>
 			</div>
 		</div>	

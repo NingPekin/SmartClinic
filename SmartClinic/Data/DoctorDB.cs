@@ -14,11 +14,11 @@ namespace SmartClinic.Data
         /// </summary>
         /// <param name="dept"></param>
         /// <returns></returns>
-        public static List<DataObject.Doctor> GetPatientByDept(string dept)
+        public static List<DataObject.Doctor> GetDoctorByName(string name)
         {
             using (var db = new ProjectContext())
             {
-                var doctorList=db.Doctor.Where(d=>d.Department==dept).ToList();
+                var doctorList = db.Doctor.Where(d => d.Name ==name).ToList();
                 return doctorList;
             }
         }

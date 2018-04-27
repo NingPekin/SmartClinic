@@ -325,12 +325,14 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataObject\Appointment.cs" />
+    <Compile Include="DataObject\AvailableTime.cs" />
     <Compile Include="DataObject\Doctor.cs" />
     <Compile Include="DataObject\OccupiedTime.cs" />
     <Compile Include="DataObject\Patient.cs" />
     <Compile Include="DataObject\ProjectContext.cs" />
     <Compile Include="DataObject\Receptionist.cs" />
     <Compile Include="Data\AppointmentDB.cs" />
+    <Compile Include="Data\AvailableTimeDB.cs" />
     <Compile Include="Data\Tools.cs" />
     <Compile Include="Data\DoctorDB.cs" />
     <Compile Include="Data\OccupiedTimeDB.cs" />
@@ -390,6 +392,10 @@
     <Compile Include="Migrations\201804231716402_1.0_edit_occupiedtime_tostring.Designer.cs">
       <DependentUpon>201804231716402_1.0_edit_occupiedtime_tostring.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804270513429_add_availabletime.cs" />
+    <Compile Include="Migrations\201804270513429_add_availabletime.Designer.cs">
+      <DependentUpon>201804270513429_add_availabletime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Patient.aspx.cs">
       <DependentUpon>Patient.aspx</DependentUpon>
@@ -444,6 +450,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804231716402_1.0_edit_occupiedtime_tostring.resx">
       <DependentUpon>201804231716402_1.0_edit_occupiedtime_tostring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804270513429_add_availabletime.resx">
+      <DependentUpon>201804270513429_add_availabletime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

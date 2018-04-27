@@ -12,20 +12,24 @@ namespace SmartClinic
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
         protected void Register(object sender, EventArgs e)
         {
-            
+  
             using (var db = new ProjectContext())
             {
+                var gender = Bus.EnumType.Gender.Female;
 
-                var labdaQuery = db.Patient.Where(u=>u.FirstName.Length > 2).ToList();
-
-                foreach (var row in labdaQuery)
+                if (RadioButton1.Checked)
                 {
-                    Response.Write(row.Email);
+                    gender = Bus.EnumType.Gender.Male;
                 }
+
+                var patient = new DataObject.Patient { Email = user_email.Text, FirstName = firstName.Text, LastName = lastName.Text, Password = password.Text, PhoneNumber = phone.Text, BirthOfDate = birthday.SelectedDate, Gender = gender, Description = description.Text };
+                Data.PatientDB.Register(patient);
+                //Response.Write("success");
+
             }
         }
     }

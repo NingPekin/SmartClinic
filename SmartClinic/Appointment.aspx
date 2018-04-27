@@ -59,7 +59,7 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
-                                <li><a href="index.html"><b>Home</b></a></li>
+								<li><a href="index.html"><b>Home</b></a></li>
 								<li><a href="service.html">Registration</a></li>
 								<li><a href="blog-grid.html">Appointment</a>
 								</li>
@@ -75,63 +75,63 @@
 
 <section class="page-title bg-2">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block">
-          <h1 style="font-family: Time new roman">Appointment</h1>
-          <p>Make your Appointment by <strong>YOUR-SELF</strong> </p>
-        </div>
-      </div>
-    </div>
+	<div class="row">
+	  <div class="col-md-12">
+		<div class="block">
+		  <h1 style="font-family: Time new roman">Appointment</h1>
+		  <p>Make your Appointment by <strong>YOUR-SELF</strong> </p>
+		</div>
+	  </div>
+	</div>
   </div>
 </section>
-      <!--joinusModal-->
-      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog modal-md" role="document">
-          <form method="get" action="blog-grid.html">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel">Login</h4>
-                </div>
-                <div class="modal-body">
-                  <label class="label label-default" >Enter your Email</label>
-                  <input type="email" id="email" name="email" class="form-control"/>
+	  <!--joinusModal-->
+	  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-md" role="document">
+		  <form method="get" action="blog-grid.html">
+		  <div class="modal-content">
+			  <div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				  <h4 class="modal-title" id="myModalLabel">Login</h4>
+				</div>
+				<div class="modal-body">
+				  <label class="label label-default" >Enter your Email</label>
+				  <input type="email" id="email" name="email" class="form-control"/>
 				  <label class="label label-default" >Enter your Password</label>
-                  <input type="text" id="password" name="Password" class="form-control" />
-                </div>
-                <div class="modal-footer">
-                  <div id="total" style="font-size:20px; color:darkblue; float:left;"></div>
-                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-success" id="subscribebtn" action="onclick()" value="2">Login</button>
-                </div>
-          </div>
-        </form>
-      </div>
-    </div>
-      <!--EndjoinusModal-->
+				  <input type="text" id="password" name="Password" class="form-control" />
+				</div>
+				<div class="modal-footer">
+				  <div id="total" style="font-size:20px; color:darkblue; float:left;"></div>
+				  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				  <button type="submit" class="btn btn-success" id="subscribebtn" action="onclick()" value="2">Login</button>
+				</div>
+		  </div>
+		</form>
+	  </div>
+	</div>
+	  <!--EndjoinusModal-->
 
 <div class="page-wrapper">
 	<div class="container">
 		<div class="row">
-      		<div class="col-md-6 ">
-		        <div class="post">
-		          <img class="img-responsive" src="images/blog/blog-post-1.jpg" alt=""><br>
-		          <p> Make or Change schedule for a week or for each doctor in any departments</P><br>
-		          <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info">Login</a>
+			<div class="col-md-6 ">
+				<div class="post">
+				  <img class="img-responsive" src="images/blog/blog-post-1.jpg" alt=""><br>
+				  <p> Make or Change schedule for a week or for each doctor in any departments</P><br>
+				  <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info">Login</a>
 			   </div>
 				</div>
-        	
+			
 			<div class="col-md-6 ">
-		        <div class="post">
-	            <img class="img-responsive" src="images/blog/blog-post-2.jpg" alt=""><br>
+				<div class="post">
+				<img class="img-responsive" src="images/blog/blog-post-2.jpg" alt=""><br>
 				<p> feel free to Make your appointment based on your schedule</P><br>
-	            <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info">Login</a>
+				<a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info">Login</a>
 				<a href="" class="btn btn-info">SignUp</a>
-		    </div>
-	      	</div>
+			</div>
+			</div>
 		</div>	
-      	</div>
+		</div>
 </div>
 
 
@@ -150,48 +150,48 @@
 	</div>
 </footer>
 
-    <!-- 
-    Essential Scripts
-    =====================================-->
-    
-    <!-- <script src="js/jquery.counterup.js"></script> -->
-    
-    <!-- Main jQuery -->
+	<!-- 
+	Essential Scripts
+	=====================================-->
+	
+	<!-- <script src="js/jquery.counterup.js"></script> -->
+	
+	<!-- Main jQuery -->
    
-    <script src="https://code.jquery.com/jquery-git.min.js"></script>
-    <!-- Bootstrap 3.1 -->
-    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <!-- Owl Carousel -->
-    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
-    <!--  -->
-    <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-    <!-- Mixit Up JS -->
-    <script src="plugins/mixitup/dist/mixitup.min.js"></script>
-    <!-- <script src="plugins/count-down/jquery.lwtCountdown-1.0.js"></script> -->
-    <script src="plugins/SyoTimer/build/jquery.syotimer.min.js"></script>
+	<script src="https://code.jquery.com/jquery-git.min.js"></script>
+	<!-- Bootstrap 3.1 -->
+	<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- Owl Carousel -->
+	<script src="plugins/slick-carousel/slick/slick.min.js"></script>
+	<!--  -->
+	<script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+	<!-- Mixit Up JS -->
+	<script src="plugins/mixitup/dist/mixitup.min.js"></script>
+	<!-- <script src="plugins/count-down/jquery.lwtCountdown-1.0.js"></script> -->
+	<script src="plugins/SyoTimer/build/jquery.syotimer.min.js"></script>
 
 
-    <!-- Form Validator -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+	<!-- Form Validator -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
 
 
-    
-    <!-- Google Map -->
-    <script src="plugins/google-map/map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
+	
+	<!-- Google Map -->
+	<script src="plugins/google-map/map.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
 
-    <script src="js/script.js"></script>
-    <script>
+	<script src="js/script.js"></script>
+	<script>
 	function onclick()
 {
-    var UserName=document.getElementById("email").value;
+	var UserName=document.getElementById("email").value;
 	var Password=document.getElementById("password").value;
 	var Type=document.getElementById("submit").value;
-    if( ExistEmail(Username,Type)&& isValidCredential(Username,Password,Type)){
+	if( ExistEmail(Username,Type)&& isValidCredential(Username,Password,Type)){
 	if(Type==1){
 	
-	    location.href="blog-grid-Patient.html";
+		location.href="blog-grid-Patient.html";
 		
 		}
 		else{
@@ -201,11 +201,11 @@
 		}
 	}
    
-    else
-    {
-        alert( "validation failed" );
-        location.href="blog-grid.html";
-    }
+	else
+	{
+		alert( "validation failed" );
+		location.href="blog-grid.html";
+	}
 	}
 	
 	</script>

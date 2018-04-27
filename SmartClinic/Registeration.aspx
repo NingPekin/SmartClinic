@@ -101,13 +101,15 @@
 						</div>
 						<div class="form-group">
 						<strong style="font-family:Time New Roman;font-size:20px;">Gender:</strong><br>
-						  <input type="checkbox" name="gender" value="Female"> Male<br>
-						  <input type="checkbox" name="gender2" value="Male"> Female 
+							<asp:RadioButton ID="RadioButton1" GroupName="Gender" Text="Male" runat="server" value="1" />
+							<asp:RadioButton ID="RadioButton2" GroupName="Gender" Text="Female" runat="server" value="2" />
+<%--						  <input type="checkbox" name="gender" value="Female"> Male<br>
+						  <input type="checkbox" name="gender2" value="Male"> Female --%>
 						</div>
 						<div class="form-group">
 						<strong style="font-family:Time New Roman;font-size:20px;">Description:</strong><br>
 						Please specify your Allergies and your medical Issues:
-						<input name="description" type="text" class="form-control" placeholder="Description">
+					<asp:TextBox id="description"  class="form-control" runat="server" />
 						</div>
 						<div class="form-group">
 						
@@ -123,10 +125,16 @@
 						
 						<asp:TextBox id="user_email"  class="form-control" runat="server" />
 						</div>
+							<div class="form-group">
+						<strong style="font-family:Time New Roman;font-size:20px;">Password:</strong><br>
+						
+						<asp:TextBox id="password"  class="form-control" TextMode="Password" runat="server" />
+						</div>
 						<div class="form-group">
 						<strong style="font-family:Time New Roman;font-size:20px;">Phone:</strong><br>
 						
 							<asp:TextBox id="phone"  class="form-control" runat="server" />
+
 						</div>
 </div>
 </div>
@@ -134,8 +142,9 @@
 <div class="block">
 						<div class="form-group">
 						<strong style="font-family:Time New Roman;font-size:20px;">Birthday::</strong><br>
-						<input type="date" name="birthday">
-						<input type="submit">
+				<%--		<input type="date" name="birthday">--%>
+							<asp:Calendar AutoPostBack="false" ID="birthday" runat="server"></asp:Calendar>
+						<%--<input type="submit">--%>
 						</div>
 						</div>
 </div>

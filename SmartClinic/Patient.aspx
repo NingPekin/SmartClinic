@@ -101,7 +101,9 @@
                     </div>
                     <div class="row" style="padding-top: 10px;">
                         <div class="col-lg-2">
-                            <input type="button" name="showAvalability" value="Show Avalibility" id="showAvalability" class="btn btn-info"><br>
+                            <input type="button" name="showAvalability" value="Show Avalibility" id="showAvalability" class="btn btn-info">
+                            <img src="https://media.giphy.com/media/l3q2SWX1EW3LdD7H2/giphy.gif" width="30" id="loader" />
+                            <br />
                         </div>
                     </div>
                 </div>
@@ -138,11 +140,11 @@
                     Hour:<br>
                     <input name="Hour" type="text" id="Hour" class="form-control">
                 </div>
-                <input type="hidden" id="doctorId" />
+                <input type="hidden" id="doctorIdn" />
                 <div class="col-sm-3" style="margin-bottom: 30px">
                     <br>
                     <br>
-                    <input type="button" name="btnSave" value="Save Avalibility" id="Button1" class="btn btn-info"><br>
+                    <input type="button" name="btnSave" value="Save Avalibility" id="btnSave" class="btn btn-info"><br>
                 </div>
             </div>
         </form>
@@ -167,6 +169,9 @@
     <script type="text/javascript" src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
     <script type="text/javascript">
         $(function () {
+
+            $('#loader').hide();
+
             $('#datetimepicker1,#datetimepicker2').datetimepicker({
                 format: "YYYY-MM-DD",
                 minDate: moment().add(-1, 'd').toDate(),
@@ -190,17 +195,30 @@
                 $('#DoctorId').val($('#DropDownListDoctor').find(":selected").text());
                 $('#Date').val(sdate.replace('T00:00:00', ''));
                 $('#Hour').val(stime);
-                $('#doctorId').val(sid);
+                $('#doctorIdn').val(sid);
             });
 
             //On Save
             $('#btnSave').click(function () {
+                var doctorid = $('#doctorIdn').val();
+                var date = $('#Date').val();
+                var hour = $('#Hour').val();
 
+                //Send Request to Save
+                $('#loader').show();
+                $.get("api/mainapi.aspx", { action: "addAppointment", id: doctorid, date: date, hour: hour })
+                    .done(function () {
+                        GetAvailableHours();
+                        $('#loader').hide();
+                    }).fail(function () {
+                        alert("Error on Save");
+                    });
             });
         });
 
         //Get Available Hours
         function GetAvailableHours() {
+            $('#loader').show();
             var doctorId = $('#DropDownListDoctor').find(":selected").val();
             var selectedDate = $('#SelectedDate').val();
 
@@ -213,10 +231,12 @@
                         $('#tableBody tr:last').after("<tr><td width='35%'>" + data[i].Date.replace('T00:00:00', '') + "</td><td>" + data[i].Time + "</td><td><input type='button' id='btnSelectApp" + i + "' sDate='" + data[i].Date + "' sTime='" + data[i].Time + "' sId='" + doctorId + "' class='btnselectapp btn btn-primary' value='Select' /></td></tr>");
                     }
 
+                    $('#loader').hide();
                 })
                 .fail(function (jqxhr, textStatus, error) {
                     var err = textStatus + ", " + error;
                     console.log("Request Failed: " + err);
+                    $('#loader').hide();
                 });
         }
 

@@ -71,6 +71,22 @@ namespace SmartClinic.Api
                             }
 
                             break;
+
+                        case "addAppointment":
+                            var doctorId = Convert.ToInt32(Request.QueryString["id"]);
+                            var selectedDate = Request.QueryString["date"];
+                            var selectedTime = Request.QueryString["hour"];
+
+                            db.Appointment.Add(new DataObject.Appointment() {
+                                Date = Convert.ToDateTime(selectedDate),
+                                Time = selectedTime,
+                                Doctor = db.Doctor.Where(a => a.Id == doctorId).FirstOrDefault()
+                            });
+
+                            db.SaveChanges();
+                            output = "{result:1}";
+
+                            break;
                     }
                 }
                 Response.Clear();
